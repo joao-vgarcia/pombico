@@ -1,0 +1,21 @@
+.logo{
+    max-width: 50px;
+    max-height: 50px;
+    margin-left: 40px;
+    margin-right: 10px;
+}
+
+
+.social{
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+}
+.fote{
+    align-self: center;
+    text-align: center;
+}
+.aas{
+    margin-left: 50px;
+}
+

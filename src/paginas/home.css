@@ -1,0 +1,80 @@
+#background{ /*primeiro background*/
+    background-color: #3490dc;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+  }
+#he1{ /*primeiro h1*/
+    color: white;
+    font-size: 34px;
+    padding-top: 30px;
+    text-align: justify;
+    
+}
+#he2{ /*subtitulo do inicio do site*/
+    color: white;
+    font-size: 25px;
+    
+}
+.funciona{ /*div row como funciona */
+    color: #323288;
+    padding-bottom: 30px;
+}
+.cartao{ /*estilos dos cards*/
+    border: 2px solid black;
+    border-radius: 0px 0px 45px 0px;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 300px;
+
+}
+.titulo{ /*titulo dos cards*/
+    color: #32329c;
+    font-size: 24px;
+    text-align: left;
+    font: bolder;
+}
+
+.num{ /*numeros dentro dos cards*/
+    color: #46988E;
+    font-size: 30px;
+    text-align: left;
+    font: bold;
+}
+.seguro{ /*background dentro da div row seguro e confiavel*/
+    background-color:  #3490dc;
+    color: #67eba2;
+}
+.textoseguro{ /*texto dentro da div row seguro e confiavel*/
+    color:white;
+    font-size: 25px;
+}
+.rapido{/*background dentro da div row rapido e facil*/
+    background-color:#a6acdd;
+    color: #67eba2;
+
+}
+.textorapido{ /*texto dentro da div row rapido e facil*/
+    color:white;
+    font-size: 25px;
+}
+#baixar{
+    color: #32329C;;
+    font-size: 40px;
+}
+.textobaixar{ /*texto dentro da coluna div baixar*/
+    font-size: 25px;
+    text-align: left;
+    color: black;
+}
+.imagembaixar{/*imagens de ios e android aqui*/
+
+    width: 300px;
+    height: 300px;
+}
+
+#precisa{
+    height: 50px;
+    
+}
