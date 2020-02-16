@@ -1,25 +1,23 @@
 .logincont {
-    background-color: #160C71;
+    background-color: #3490dc;
 }
 .loginTitulo{
     color: black;
-    font-size: 32px;
+    font-size: 25px;
 }
-.loginTit{
-    color: white;
-    font-size: 32px;
-}
+
 
 .envbtn{
     border-radius: 15px;
-    background-color: #32329C;
+    background-color: #3490dc;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     padding-right: 30px;
     padding-left: 30px;
 }
 .envbtn:hover{
-    color: rgb(188, 252, 246);
+    
+    color:rgb(1, 0, 70);
 }
 .esqueci:hover{
     color: black;
@@ -28,10 +26,11 @@
 .esqueci{
     color: black;
     font-size: 16px;
+    
 }
 .texto{/*texto dentro do formulário*/
     text-align: left;
-    font-size: 28px;
+    font-size: 25px;
     font: bolder;
 
 }
@@ -52,12 +51,13 @@
     border-radius: 15px;
     height: 60px;
     position: relative;
-    background-color: #32329C;
+    background-color: #3490dc;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
 }
 .botaocad:hover{
-    color: rgb(188, 252, 246);
+    
+    color:rgb(1, 0, 70);
 }
 
 .form-group{
@@ -68,13 +68,16 @@
 .redbtn{
     border-radius: 15px;
     position: relative;
-    background-color: #32329C;
+    background-color: #3490dc;
     color: white;
     font-size: 20px;
     margin:10px;
 }
 .redbtn:hover{
-    color:yellowgreen;
+    color:rgb(1, 0, 70);
 }
 
 
+.login{
+    border-radius: 15px;
+}

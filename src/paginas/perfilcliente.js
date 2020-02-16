@@ -50,6 +50,8 @@ class Perfilcliente extends Component {
                                         <p>DD/MM/AAAA</p>
                                         <h4 className="clienteh4 card-text">Sexo:</h4>
                                         <p>Feminino</p>
+                                        <h4 className="clienteh4 card-text">Ativo desde:</h4>
+                                        <p>01/01/2020</p>
                                     </div>
                                 </div>
                             </div>

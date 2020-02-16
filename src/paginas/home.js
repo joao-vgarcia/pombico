@@ -108,7 +108,7 @@ class Home extends Component { //criando a classe
                                             <p >Seja você prestador ou cliente, é preciso realizar um rápido cadastro para a segurança de todos os usuários</p>
                                         </div>
                                         <div className="col-sm-6 col-md-5">
-                                            <img src={backk} className="img-fluid" style={{height:"200px",width:"200px"}}   />
+                                        <lottie-player src={"https://assets6.lottiefiles.com/packages/lf20_iXKIMU.json"}  speed={1}  style={{width: "200px", height: "200px",background:"transparent"}}  loop autoplay ></lottie-player>
 
                                         </div>
                                     </div>
@@ -122,7 +122,7 @@ class Home extends Component { //criando a classe
                                             <p className="">Navegue entre as diversas categorias de serviços no app ou procure por algo específico</p>
                                         </div>
                                         <div className="col-sm-6 col-md-5">
-                                            <img src={backk} className="img-fluid" style={{height:"200px",width:"200px"}}   />
+                                        <lottie-player src={"https://assets4.lottiefiles.com/datafiles/qSKave3osZaw1QT/data.json"}  speed={1.3}  style={{width: "200px", height: "200px",background:"transparent"}}  loop autoplay ></lottie-player>
 
                                         </div>
                                     </div>
@@ -137,7 +137,7 @@ class Home extends Component { //criando a classe
                                             <p className="">Conecte-se com prestadores pertos de você negocie o serviço direto pelo app</p>
                                         </div>
                                         <div className="col-sm-6 col-md-5">
-                                            <img src={backk} className="img-fluid" style={{height:"200px",width:"200px"}}   />
+                                        <lottie-player src={"https://assets6.lottiefiles.com/packages/lf20_ycNQ7E.json"}  speed={1.4}  style={{width: "200px", height: "200px",background:"transparent"}}  loop autoplay ></lottie-player>
 
                                         </div>
 
@@ -152,7 +152,7 @@ class Home extends Component { //criando a classe
                                             <p className="">Depois de negociar você poderá marcar date e horário para o serviço acontecer e realizar o pagamento pelo app</p>
                                         </div>
                                         <div className="col-sm-6 col-md-5">
-                                            <img src={backk} className="img-fluid" style={{height:"200px",width:"200px"}}   />
+                                        <lottie-player src={"https://assets4.lottiefiles.com/packages/lf20_5zYhWw.json"}  speed={1}  style={{width: "200px", height: "200px",background:"transparent"}}  loop autoplay ></lottie-player>
 
                                         </div>
 
@@ -233,7 +233,7 @@ class Home extends Component { //criando a classe
                     <div className="row justify-content-center">
                         {/**coluna da esquerda com uma imagem que some em telas pequenas */}
                         <div className="col-md-6">
-                            <div className="d-none d-md-block"><img src={mulher} className="img-fluid" style={{marginTop:"50px"}} /></div>
+                            <div className="d-none d-md-block"><lottie-player src={"https://assets4.lottiefiles.com/temp/lf20_3tPLQ7.json"} speed={1}  style={{width: "500px", height: "300px", background:"transparent"}}  loop autoplay ></lottie-player></div>
 
                         </div>
                         {/**colunas da direita com linhas responsivas */}
@@ -249,8 +249,8 @@ class Home extends Component { //criando a classe
                             <h2 className="textobaixar">Disponível para Android e iOS</h2>
                             {/**uma linha dentro de uma linha com duas imagens fixas */}
                              <div className="row justify-content-around">
-                                <button className="btn btn-primary col-5" style={{width:"50px", height:"50px"}}><FaAndroid/> Baixe para android</button>
-                                <button className="btn btn-primary col-5" style={{width:"50px", height:"50px"}}><FaAppStore/> Baixe para Ios</button>
+                                <button className="btn btnai col-5" ><FaAndroid/> <b>Android</b></button>
+                                <button className="btn btnai col-5" ><FaAppStore/> <b>IOS</b></button>
                              </div>
                         </div>
 

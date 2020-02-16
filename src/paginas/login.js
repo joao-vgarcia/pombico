@@ -119,128 +119,115 @@ class Login extends Component {
             return <Redirect to="/cadastroPrest"/>
         }else{
             return (
-                    <div className="container-fluid logincont">
-                        <div className="d-none d-md-block"><br /></div>
+        <div className="container-fluid logincont">
+            <div className="d-none d-md-block"><br /></div>
+                <div className="container">
 
 
 
+                <div className="row justify-content-center">
 
 
 
+                    <div className="col-sm-12 col-md-4">
+                        <form onSubmit={this.submeterFormLogin} className="form-group" style={{backgroundColor:"white", borderRadius:"15px", maxWidth:"500px"}}>
 
-
-
-
-
-
-
-                        <div className="container">
-
-
-
-                            <div className="row justify-content-around">
-
-
-
-                                <div className="col-sm-12 col-md-6">
-                                    <form onSubmit={this.submeterFormLogin} className="form-group" style={{backgroundColor:"white", borderRadius:"15px", maxWidth:"500px"}}>
-
-                                        <div className="form-row justify-content-center">
-                                            <h1 className="loginTitulo">Login</h1>
-                                        </div>
-
-                                        <div className="form-row justify-content-center">
-                                            <div className="input-group mb-3 justify-content-center">
-                                                <input className="col-9 form-control-lg" type="email" value={this.state.email} onChange={this.alterarUsername}  placeholder="Digite seu email" /><br/>
-                                            </div>
-                                            <div className="input-group mb-3 justify-content-center">
-                                                <input className="col-9 form-control-lg" type="password" value={this.state.password} onChange={this.alterarPassword} placeholder="Digite sua senha" />
-                                            </div>
-                                            <div className="input-group-append">
-                                                <button className=" btn btn-block envbtn" type="submit" value="Entrar">Entrar</button>
-                                            </div>
-                                            <div className="d-none d-md-block"><br /></div>
-                                            
-                                        </div>
-                                        <div className="row justify-content-center">
-                                            <Link className="esqueci col-8" to="/home"><b>Esqueci minha senha</b></Link>
-                                        </div>
-                                        <div className="d-none d-md-block"><br /></div>
-                                    </form>
-                                
-                                </div>
-
-
-                                <div className="col-sm-12 col-md-4">
-                                    <form className="form-group" style={{backgroundColor:"white", borderRadius:"15px", maxWidth:"500px"}}>
-
-                                        <div className="form-row justify-content-center">
-                                            <h1 className="loginTitulo">Cadastre-se</h1>
-                                            
-                                        </div>
-
-                                        <div className="form-row justify-content-center">
-                                            <div className="input-group col-10 justify-content-center">
-                                                <button className=" btn  btn-block redbtn" type="submit" onClick={this.submeterFormPrestador.bind(this)}  value="Entrar">Prestador de serviços</button>
-                                            </div>
-                                            <div className="input-group col-10 justify-content-center">
-                                            <button className=" btn btn-block redbtn" type="submit" onClick={this.submeterFormCliente.bind(this)}value="Entrar">Clientes</button>
-                                            </div>
-                                            
-                                            <div className="d-none d-md-block"><br /></div>
-                                            
-                                        </div>
-                                      
-                                        <div className="d-none d-md-block"><br /></div>
-                                    </form>
-                                
-                                </div>
-                                
-                                    <div className="d-none d-md-block"><br /></div><div className="d-block"><br /></div>
-
-                                
-
-                                    {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
-                                    <div className="d-none d-md-block"><br /></div><div className="d-block"><br /></div>
-                                    {/**Acaba o form */}
-                               
+                            <div className="form-row justify-content-center">
+                                <h1 className="loginTitulo">Login</h1>
                             </div>
+
+                            <div className="form-row justify-content-center">
+                                <div className="input-group mb-3 justify-content-center">
+                                    <input className="col-9 form-control login" type="email" value={this.state.email} onChange={this.alterarUsername}  placeholder="Digite seu email" />
+                                </div>
+                                <div className="input-group mb-3 justify-content-center">
+                                    <input className="col-9 form-control login" type="password" value={this.state.password} onChange={this.alterarPassword} placeholder="Digite sua senha" />
+                                </div>
+                                <div className="input-group-append">
+                                    <button className=" btn btn-block envbtn" type="submit" value="Entrar">Entrar</button>
+                                </div>
+                                <div className="d-none d-md-block"><br /></div>
+                                
+                            </div>
+                            <div className="row col-12">
+                                <Link className="esqueci mx-auto" style={{paddingLeft:"30px"}}   to="/home"><b>Esqueci minha senha</b></Link>
+                            </div>
+                            <div className="d-none d-md-block"><br /></div>
+                        </form>
+                    
                     </div>
 
 
+                    <div className="col-sm-12 col-md-4">
+                        <form className="form-group" style={{backgroundColor:"white", borderRadius:"15px", height:"238px", position:"relative"}}>
 
+                            <div className="form-row justify-content-center">
+                                <h1 className="loginTitulo">Cadastre-se</h1>
+                                
+                            </div>
 
+                            <div className="form-row justify-content-center">
+                                <div className="input-group col-10 justify-content-center">
+                                    <button className=" btn  btn-block redbtn" type="submit" onClick={this.submeterFormPrestador.bind(this)}  value="Entrar">Prestador de serviços</button>
+                                </div>
+                                <div className="input-group col-10 justify-content-center">
+                                <button className=" btn btn-block redbtn" type="submit" onClick={this.submeterFormCliente.bind(this)}value="Entrar">Clientes</button>
+                                </div>
+                                
+                                <div className="d-none d-md-block"><br /></div>
+                                
+                            </div>
+                            
+                            <div className="d-none d-md-block"><br /></div>
+                        </form>
+                    
+                    </div>
+                    
+                        <div className="d-none d-md-block"><br /></div><div className="d-block"><br /></div>
 
+                    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    <div className="d-none d-md-block"><br /></div><div className="d-block"><br /></div>
-
+                        {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
+                        <div className="d-none d-md-block"><br /></div><div className="d-block"><br /></div>
+                        {/**Acaba o form */}
+                    
                 </div>
+        </div>
 
 
-            )
-        }
 
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div className="d-none d-md-block"><br /></div><div className="d-block"><br /></div>
+
+    </div>
+
+
+)
+}
+
+}
 
 
 }

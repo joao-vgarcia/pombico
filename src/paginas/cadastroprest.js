@@ -117,7 +117,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
             //então vai passar para o else
             //quando o cadastro for feito ele redireciona com a rota para a pagina do cliente
 
-            return <Redirect to="/perfilprest"/>
+            return <Redirect to="/baixar"/>
             //o direcionamento fica dentro do return
         }else{
         return (
@@ -135,7 +135,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                     </div>
                     {/**Formulário para fazer o cadastro */}
                     <div className="mx-auto">
-                                    <form className=" formulario container-fluid" style={{ backgroundColor: "white" }}>
+                                    <form className=" formulario container-fluid">
                                     <div className="d-none d-md-block"><br /></div>
                                    
                                    
@@ -143,20 +143,20 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                     <div className="form-row">
                                          <div className="d-none d-md-block"><br /></div>
                                         <label className="col-sm-12 col-md-5 texto">Nome Completo</label>
-                                        <input type="text" value={this.state.username} onChange={this.handleUsernameChange} className="form-control-lg col-sm-12 col-md-7" placeholder="Nome Completo" />
+                                        <input type="text" value={this.state.username} onChange={this.handleUsernameChange} className="form-control col-sm-12 col-md-7" placeholder="Nome Completo" />
                                     </div>
                                     <div className="d-none d-md-block"><br /></div>
                                     {/**Linha para cadastro de idade */}
                                     <div className="form-row">
                                         <label className="col-sm-12 col-md-5 texto">Data de nascimento</label>
-                                        <input type="date" value={this.state.userdate} onChange={this.handleUserdateChange} className="form-control-lg col-sm-12 col-md-7" />
+                                        <input type="date" value={this.state.userdate} onChange={this.handleUserdateChange} className="form-control col-sm-12 col-md-7" />
                                     </div>
 
                                     <div className="d-none d-md-block"><br /></div>
                                     {/**Linha para cadastro de cpf */}
                                     <div className="form-row">
                                         <label className="col-sm-12 col-md-5 texto">CPF</label>
-                                        <input type="number" value={this.state.cpf} onChange={this.cpf} className="form-control-lg col-sm-12 col-md-7" placeholder="CPF" />
+                                        <input type="number" value={this.state.cpf} onChange={this.cpf} className="form-control col-sm-12 col-md-7" placeholder="CPF" />
                                     </div>
 
 
@@ -166,7 +166,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                     {/**linha para salvar email */}
                                     <div className="form-row">
                                         <label className="col-sm-12 col-md-5 texto">Email</label>
-                                        <input type="email" value={this.state.email} onChange={this.handleEmailChange} className="form-control-lg col-sm-12 col-md-7" placeholder="E-mail" />
+                                        <input type="email" value={this.state.email} onChange={this.handleEmailChange} className="form-control col-sm-12 col-md-7" placeholder="E-mail" />
                                     </div>
 
                                     {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -175,7 +175,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                     {/**Linha para o sexo */}
                                     <div className="form-row">
                                         <label className="col-sm-12 col-md-5 texto">Sexo</label>
-                                        <select value={this.state.sexo} onChange={this.handleSexoChange} className="col-sm-12 col-md-7 form-control-lg">
+                                        <select value={this.state.sexo} onChange={this.handleSexoChange} className="col-sm-12 col-md-7 form-control">
                                             <option value=""></option>
                                             <option value="feminino">Feminino</option>
                                             <option value="masculino">Masculino</option>
@@ -194,7 +194,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                             value={this.state.celular}
                                             onChange={this.handleCelularChange}
                                             placeholder=" (XX) XXXXX-XXXX"
-                                            className="form-control-lg col-sm-12 col-md-7" />
+                                            className="form-control col-sm-12 col-md-7" />
                                     </div>
 
                                     {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -203,7 +203,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                     {/**Linha para estado */}
                                     <div className="form-row">
                                         <label className="col-sm-12 col-md-5 texto">Estado</label>
-                                        <select className="form-control-lg col-sm-12 col-md-7">
+                                        <select className="form-control col-sm-12 col-md-7">
                                             <option value=""></option>
                                             <option value="RJ">Rio de Janeiro</option>
                                             <option value="SP">São Paulo</option>
@@ -224,9 +224,15 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                         <input type="number"
                                             value={this.state.cep}
                                             onChange={this.cep}
-                                            className="form-control-lg col-sm-12 col-md-7"
+                                            className="form-control col-sm-12 col-md-7"
                                             placeholder="XXXXX-XXX" />
 
+                                    </div>
+
+                                    <div className="d-none d-md-block"><br /></div>
+                                        <div className="form-row">
+                                        <label className="col-sm-12 col-md-5 mx-auto texto">Número</label>
+                                        <input type="number" className="form-control col-sm-12 col-md-7" placeholder="Número da residência"/>
                                     </div>
 
                                     {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -238,7 +244,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                         <input type="password"
                                             value={this.state.senha}
                                             onChange={this.handleSenhaChange}
-                                            className="form-control-lg col-sm-12 col-md-7" />
+                                            className="form-control col-sm-12 col-md-7" />
                                     </div>
 
                                     {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -252,7 +258,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
                                             <div className="form-row">
                                                 <label className="col-sm-12 col-md-5 texto">Categoria</label>
-                                                <select className="form-control-lg col-sm-12 col-md-7" onChange={this.aletrarEspecializacao}>
+                                                <select className="form-control col-sm-12 col-md-7" onChange={this.aletrarEspecializacao}>
                                                     <option value={0}></option>
                                                     <option value={1}>Informática</option>
                                                     <option value={2}>Design</option>
@@ -263,7 +269,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
                                             <div className="form-row">
                                                 <label className="col-sm-12 col-md-5 texto">Especialidade</label>
-                                                <select className="form-control-lg col-sm-12 col-md-7" onChange={this.fixarEsp}>
+                                                <select className="form-control col-sm-12 col-md-7" onChange={this.fixarEsp}>
                                                     <option value=""></option>
                                                     <option value={1}>{this.state.esp1}</option>
                                                     <option value={2}>{this.state.esp2}</option>

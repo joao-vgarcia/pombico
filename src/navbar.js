@@ -29,7 +29,7 @@ class Navbar extends Component {
 
     mudacor3() {
         
-        this.setState({ cor5: "#32329C", fonte5:"white" })
+        this.setState({ cor5: "#3490dc", fonte5:"white" })
         this.setState({ cor6: "white", fonte6: "#32329C" })
         this.setState({ cor7: "white", fonte7: "#32329C" })
         this.setState({ cor4: "white", fonte4:"#32329C" })
@@ -37,7 +37,7 @@ class Navbar extends Component {
     mudacor4() {
         
         this.setState({ cor5: "white", fonte5:"#32329C" })
-        this.setState({ cor4: "#32329C", fonte4:"white" })
+        this.setState({ cor4: "#3490dc", fonte4:"white" })
         this.setState({ cor6: "white", fonte6: "#32329C" })
         this.setState({ cor7: "white", fonte7: "#32329C" })
     }
@@ -45,7 +45,7 @@ class Navbar extends Component {
     mudacor5() {
      
         this.setState({ cor5: "white" , fonte5:"#32329C"})
-        this.setState({ cor6: "#32329C", fonte6: "white" })
+        this.setState({ cor6: "#3490dc", fonte6: "white" })
         this.setState({ cor7: "white", fonte7: "#32329C" })
         this.setState({ cor4: "white", fonte4:"#32329C" })
 
@@ -55,7 +55,7 @@ class Navbar extends Component {
        
         this.setState({ cor5: "white" , fonte5: "#32329C"})
         this.setState({ cor6: "white" , fonte6: "#32329C"})
-        this.setState({ cor7: "#32329C", fonte7 : "white" })
+        this.setState({ cor7: "#3490dc", fonte7 : "white" })
         this.setState({ cor4: "white", fonte4:"#32329C " })
     }
 

@@ -19,3 +19,12 @@ hr{/*tamanho máximo da linha colocada*/
 body{
     font-family: 'Raleway', sans-serif;
   }
+.ligarperfil{
+    color:white;
+    background-color: #32329C;
+    border-radius:"15px";
+}
+.ligarperfil:hover{
+    color:white;
+    font-size: large;
+}

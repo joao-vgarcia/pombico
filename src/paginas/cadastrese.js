@@ -58,7 +58,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
             //então vai passar para o else
             //quando o cadastro for feito ele redireciona com a rota para a pagina do cliente
 
-            return <Redirect to="/perfilcliente"/>
+            return <Redirect to="/baixar"/>
             //o direcionamento fica dentro do return
         }else{
         return (
@@ -77,29 +77,41 @@ class Form extends Component {//inicio da classe formulario de cadastro
                     {/**Formulário para fazer o cadastro */}
                     <form className="formulario container">
                         {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
-                        <div className="d-none d-md-block"><br /></div> <div className="d-block"><br /></div>
+                        <div className="d-block"><br /></div>
                         {/**Linha com o método para salvar nome */}
                         <div className="form-row">
 
-                            <label className="col-10 mx-auto texto">Nome Completo</label>
+                            <label className="col-sm-12 col-md-5 mx-auto texto">Nome Completo</label>
                             <input type="text"
                                 value={this.state.username}
                                 onChange={this.handleUsernameChange}
-                                className="form-control-lg col-10 mx-auto"
+                                className="form-control col-sm-12 col-md-7 mx-auto"
                                 placeholder="Nome Completo"
                             />
                         </div>
+                        <div className="d-none d-md-block"><br /></div>
+                            {/**Linha para cadastro de idade */}
+                            <div className="form-row">
+                                <label className="col-sm-12 col-md-5 texto">Data de nascimento</label>
+                                <input type="date" value={this.state.userdate} onChange={this.handleUserdateChange} className="form-control col-sm-12 col-md-7" />
+                            </div>
+                            <div className="d-none d-md-block"><br /></div>
+                                {/**Linha para cadastro de cpf */}
+                            <div className="form-row">
+                                <label className="col-sm-12 col-md-5 texto">CPF</label>
+                                <input type="number" value={this.state.cpf} onChange={this.cpf} className="form-control col-sm-12 col-md-7" placeholder="CPF" />
+                            </div>
 
                         {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
                         <div className="d-none d-md-block"><br /></div>
 
                         {/**linha para salvar email */}
                         <div className="form-row">
-                            <label className="col-10 mx-auto texto ">Email</label>
+                            <label className="col-sm-12 col-md-5 mx-auto texto ">Email</label>
                             <input type="email"
                                 value={this.state.email}
                                 onChange={this.handleEmailChange}
-                                className="form-control-lg col-10 mx-auto"
+                                className="form-control col-sm-12 col-md-7 mx-auto"
                                 placeholder="E-mail" />
                         </div>
 
@@ -108,8 +120,8 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
                         {/**Linha para o sexo */}
                         <div className="form-row">
-                            <label className="col-10 mx-auto texto">Sexo</label>
-                            <select value={this.state.sexo} onChange={this.handleSexoChange} className="col-10 mx-auto form-control-lg">
+                            <label className="col-sm-12 col-md-5 mx-auto texto">Sexo</label>
+                            <select value={this.state.sexo} onChange={this.handleSexoChange} className="col-sm-12 col-md-7 mx-auto form-control">
                                 <option value=""></option>
                                 <option value="feminino">Feminino</option>
                                 <option value="masculino">Masculino</option>
@@ -122,12 +134,12 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
                         {/**Linha para celular */}
                         <div className="form-row">
-                            <label className="col-10 mx-auto  texto">Celular</label>
+                            <label className="col-sm-12 col-md-5 mx-auto  texto">Celular</label>
                             <input type="number"
                                 value={this.state.celular}
                                 onChange={this.handleCelularChange}
                                 placeholder=" (XX) XXXXX-XXXX"
-                                className="form-control-lg col-10 mx-auto" />
+                                className="form-control col-sm-12 col-md-7 mx-auto" />
                         </div>
 
                         {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -135,8 +147,8 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
                         {/**Linha para estado */}
                         <div className="form-row">
-                            <label className="col-10 mx-auto texto">Estado</label>
-                            <select className="form-control-lg col-10 mx-auto">
+                            <label className="col-sm-12 col-md-5 mx-auto texto">Estado</label>
+                            <select className="form-control col-sm-12 col-md-7 mx-auto">
                                 <option value=""></option>
                                 
                                 <option value="RJ">Rio de Janeiro</option>
@@ -154,25 +166,30 @@ class Form extends Component {//inicio da classe formulario de cadastro
                          * apenas manipular o json para criar as coisas
                          */}
                         <div className="form-row">
-                            <label className="col-10 mx-auto texto">CEP</label>
+                            <label className="col-sm-12 col-md-5 mx-auto texto">CEP</label>
 
                             <input type="number"
                                 value={this.state.cep}
                                 onChange={this.handleSenhaChange}
-                                className="form-control-lg col-10 mx-auto" />
+                                className="form-control col-sm-12 col-md-7 mx-auto" 
+                                placeholder="CEP"/>
 
                         </div>
-
+                        <div className="d-none d-md-block"><br /></div>
+                        <div className="form-row">
+                        <label className="col-sm-12 col-md-5 mx-auto texto">Número</label>
+                        <input type="number" className="form-control col-sm-12 col-md-7" placeholder="Número da residência"/>
+                        </div>
                         {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
                         <div className="d-none d-md-block"><br /></div>
 
                         {/**Linha para salvar a senha */}
                         <div className="form-row">
-                            <label className="col-10 mx-auto texto">Senha</label>
+                            <label className="col-sm-12 col-md-5 mx-auto texto">Senha</label>
                             <input type="password"
                                 value={this.state.senha}
                                 onChange={this.handleSenhaChange}
-                                className="form-control-lg col-10 mx-auto" />
+                                className="form-control col-sm-12 col-md-7 mx-auto" />
                         </div>
 
                         {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -180,9 +197,9 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
                         {/**Devemos validar a senha */}
                         <div className="form-row">
-                            <label className="col-10 mx-auto texto">Confirmar Senha</label>
+                            <label className="col-sm-12 col-md-5 mx-auto texto">Confirmar Senha</label>
                             <input type="password"
-                                className="form-control-lg col-10 mx-auto" />
+                                className="form-control col-sm-12 col-md-7 mx-auto" />
                         </div>
 
                         {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -192,7 +209,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                          * Dentro do botão deve ter todos os metodos para criar um usuário
                          */}
                         <div className="row justify-content-center">
-                            <button type="submit" className="btn btn-block botaocad col-10" onClick={this.red.bind(this)}>Continuar</button>
+                            <button type="submit" className="btn btn-block botaocad col-sm-12 col-md-7" onClick={this.red.bind(this)}>Continuar</button>
                         </div>
 
                         {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}

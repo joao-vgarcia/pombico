@@ -13,6 +13,7 @@ import perfilprest from "./paginas/perfilprestador";
 import perfilcliente from "./paginas/perfilcliente";
 import cadastroPrest from "./paginas/cadastroprest";
 import perguntas from "./paginas/perguntas"
+import baixar from "./paginas/baixar"
 
 
 
@@ -32,6 +33,7 @@ function Routes() {
         <Route path="/perfilcliente" exact component={perfilcliente}/>
         <Route path="/cadastroPrest" exact component={cadastroPrest}/>
         <Route path="/perguntas" exact component={perguntas}/>
+        <Route path="/baixar" exact component={baixar}/>
 
         
        
