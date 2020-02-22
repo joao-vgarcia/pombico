@@ -12,13 +12,15 @@ import mulher from '../imagens/mulher.svg'
 import android from '../imagens/android.svg'
 import ios from '../imagens/ios.svg'
 //fim da importação das imagens
+
+
 class Home extends Component { //criando a classe
     //sem método construtor ainda
 
     render() {
         return (
             <div> {/**Div que recebe todas as divs */}
-
+                
                 {/**Primeiro container */}
                 <div className="container-fluid justify-content-center" >
                     {/**primeira linha com os textos */}
@@ -101,7 +103,7 @@ class Home extends Component { //criando a classe
 
                             <div className	="carousel-inner">
                                 <div className	="carousel-item active">
-                                    <div className="row justify-content-around">
+                                    <div className="row justify-content-center">
                                         <div className="col-sm-6 col-md-5 ">
                                             <p className="num">1</p>
                                             <p className="titulo">Cadastre-se</p>
@@ -115,7 +117,7 @@ class Home extends Component { //criando a classe
                                    
                                 </div>
                                 <div className	="carousel-item">
-                                    <div className="row justify-content-around">
+                                    <div className="row justify-content-center">
                                         <div className="col-sm-6 col-md-5 ">
                                             <p className=" num">2</p>
                                             <p className=" titulo">Busque por um serviço</p>
@@ -128,7 +130,7 @@ class Home extends Component { //criando a classe
                                     </div>
                                 </div>
                                 <div className	="carousel-item">
-                                    <div className="row justify-content-around"> 
+                                    <div className="row justify-content-center"> 
 
                                     
                                         <div className="col-sm-6 col-md-5 ">
@@ -144,7 +146,7 @@ class Home extends Component { //criando a classe
                                     </div>
                                 </div>
                                 <div className="carousel-item">
-                                    <div className="row justify-content-around">
+                                    <div className="row justify-content-center">
                                                 
                                         <div className="col-sm-6 col-md-5 ">
                                             <p className=" num">4</p>
@@ -164,10 +166,10 @@ class Home extends Component { //criando a classe
 
 
                             <a className="carousel-control-prev" href="#comoFunciona" data-slide="prev" >
-                            <span ><IoIosArrowRoundBack style={{backgroundColor:"black"}} /></span>
+                            <span><IoIosArrowRoundBack style={{backgroundColor:"#30305d", fontSize:"56px"}}/></span>
                             </a>
                             <a className="carousel-control-next" href="#comoFunciona" data-slide="next" >
-                            <span ><IoIosArrowRoundForward style={{backgroundColor:"black"}} /></span>
+                            <span ><IoIosArrowRoundForward style={{backgroundColor:"#30305d", fontSize:"56px"}}/></span>
                             </a>
                             {/**className="carousel-control-prev-icon" */}
                              {/**className="carousel-control-next-icon" */}
@@ -246,12 +248,11 @@ class Home extends Component { //criando a classe
                             <h1 id="baixar"><center>Baixe nosso aplicativo</center></h1>
                             <hr />{/**quebra de linha com um traço */}
                             <h2 className="textobaixar">Faça o Download do app e contrate os serviços que precisa, sem complicações</h2>
-                            <h2 className="textobaixar">Disponível para Android e iOS</h2>
+                            <h2 className="textobaixar">Disponível para aparelhos móveis</h2>
                             {/**uma linha dentro de uma linha com duas imagens fixas */}
-                             <div className="row justify-content-around">
-                                <button className="btn btnai col-5" ><FaAndroid/> <b>Android</b></button>
-                                <button className="btn btnai col-5" ><FaAppStore/> <b>IOS</b></button>
-                             </div>
+                             
+                                <button className="btn btnai btn-block" > <b>Baixar</b></button>
+                             
                         </div>
 
                     </div>

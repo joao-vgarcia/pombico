@@ -1,6 +1,7 @@
 import "./login.css";
 import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
+import pombo from "../imagens/pombo1.PNG"
 
 class Login extends Component {
     constructor() {
@@ -119,7 +120,7 @@ class Login extends Component {
             return <Redirect to="/cadastroPrest"/>
         }else{
             return (
-        <div className="container-fluid logincont">
+        <div className="container-fluid logincont" >
             <div className="d-none d-md-block"><br /></div>
                 <div className="container">
 
@@ -133,10 +134,10 @@ class Login extends Component {
                         <form onSubmit={this.submeterFormLogin} className="form-group" style={{backgroundColor:"white", borderRadius:"15px", maxWidth:"500px"}}>
 
                             <div className="form-row justify-content-center">
-                                <h1 className="loginTitulo">Login</h1>
+                                <h1 className="loginTitulo my-2">Login</h1>
                             </div>
 
-                            <div className="form-row justify-content-center">
+                            <div className="form-row justify-content-center ">
                                 <div className="input-group mb-3 justify-content-center">
                                     <input className="col-9 form-control login" type="email" value={this.state.email} onChange={this.alterarUsername}  placeholder="Digite seu email" />
                                 </div>
@@ -159,18 +160,18 @@ class Login extends Component {
 
 
                     <div className="col-sm-12 col-md-4">
-                        <form className="form-group" style={{backgroundColor:"white", borderRadius:"15px", height:"238px", position:"relative"}}>
+                        <form className="form-group" style={{backgroundColor:"white", borderRadius:"15px", height:"245px", position:"relative"}}>
 
                             <div className="form-row justify-content-center">
-                                <h1 className="loginTitulo">Cadastre-se</h1>
+                                <h1 className="loginTitulo my-2">Cadastre-se</h1>
                                 
                             </div>
 
                             <div className="form-row justify-content-center">
-                                <div className="input-group col-10 justify-content-center">
+                                <div className="input-group col-10 justify-content-center my-2">
                                     <button className=" btn  btn-block redbtn" type="submit" onClick={this.submeterFormPrestador.bind(this)}  value="Entrar">Prestador de serviços</button>
                                 </div>
-                                <div className="input-group col-10 justify-content-center">
+                                <div className="input-group col-10 justify-content-center my-2">
                                 <button className=" btn btn-block redbtn" type="submit" onClick={this.submeterFormCliente.bind(this)}value="Entrar">Clientes</button>
                                 </div>
                                 
@@ -184,7 +185,10 @@ class Login extends Component {
                     </div>
                     
                         <div className="d-none d-md-block"><br /></div><div className="d-block"><br /></div>
-
+                        <div className="row col-12 justify-content-center">
+                            <img src={pombo} className="my-10 d-none d-sm-none d-md-block " />
+                        </div>
+                        
                     
 
                         {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}

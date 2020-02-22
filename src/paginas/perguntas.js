@@ -7,11 +7,13 @@ import jenifer from "../imagens/djenifer.PNG"
 import vinicius from "../imagens/vinicius.PNG"
 import yasmin from "../imagens/yasmin.PNG"
 
+
 export default class Perguntas extends Component { //classe faq
     //sem método construtor ainda
     render() {
         return (
             <div> {/**div completa */}
+            
                 {/**container para armazenar as perguntas */}
                 <div className="d-block"><br /></div>
                 <div className='container'>

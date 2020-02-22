@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logo from '../src/imagens/logoPombo.PNG';
 import './Navbar.css';
 
-class Navbar extends Component {
+export default class Navbar extends Component {
     constructor() {
         super()
         this.state = {
@@ -29,7 +29,7 @@ class Navbar extends Component {
 
     mudacor3() {
         
-        this.setState({ cor5: "#3490dc", fonte5:"white" })
+        this.setState({ cor5: "#30305d", fonte5:"white" })
         this.setState({ cor6: "white", fonte6: "#32329C" })
         this.setState({ cor7: "white", fonte7: "#32329C" })
         this.setState({ cor4: "white", fonte4:"#32329C" })
@@ -37,7 +37,7 @@ class Navbar extends Component {
     mudacor4() {
         
         this.setState({ cor5: "white", fonte5:"#32329C" })
-        this.setState({ cor4: "#3490dc", fonte4:"white" })
+        this.setState({ cor4: "#30305d", fonte4:"white" })
         this.setState({ cor6: "white", fonte6: "#32329C" })
         this.setState({ cor7: "white", fonte7: "#32329C" })
     }
@@ -45,7 +45,7 @@ class Navbar extends Component {
     mudacor5() {
      
         this.setState({ cor5: "white" , fonte5:"#32329C"})
-        this.setState({ cor6: "#3490dc", fonte6: "white" })
+        this.setState({ cor6: "#30305d", fonte6: "white" })
         this.setState({ cor7: "white", fonte7: "#32329C" })
         this.setState({ cor4: "white", fonte4:"#32329C" })
 
@@ -55,7 +55,7 @@ class Navbar extends Component {
        
         this.setState({ cor5: "white" , fonte5: "#32329C"})
         this.setState({ cor6: "white" , fonte6: "#32329C"})
-        this.setState({ cor7: "#3490dc", fonte7 : "white" })
+        this.setState({ cor7: "#30305d", fonte7 : "white" })
         this.setState({ cor4: "white", fonte4:"#32329C " })
     }
 
@@ -66,7 +66,7 @@ class Navbar extends Component {
                 <div>
 
                     <nav className="navbar navbar-expand-lg navbar-dark bg-white text-dark" id="branco">
-                        <p className='logomenu'><img src={logo} className=' logo' /></p>
+                        <p className='logomenu'><Link to="/home" onClick={this.mudacor0.bind(this)}><img src={logo} className=' logo' /></Link></p>
                         <Link className="logoescrito" to="/home" onClick={this.mudacor0.bind(this)} >PomBico</Link>
                         <button className="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span className="navbar-toggler-icon"></span></button>
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
@@ -100,4 +100,3 @@ class Navbar extends Component {
 
 
 
-export default Navbar;

@@ -7,12 +7,14 @@ import jenifer from "../imagens/djenifer.PNG"
 import vinicius from "../imagens/vinicius.PNG"
 import yasmin from "../imagens/yasmin.PNG"
 
+
+
 class FAQ extends Component { //classe faq
     //sem método construtor ainda
     render() {
         return (
             <div> {/**div completa */}
-
+                 
                 {/**coloca quebra de linha dependendo do tamanho da tela */}
                 <div className="d-block"><hr /></div>
                 {/**container de quem somos com os cards missão visao e valores */}
@@ -22,19 +24,19 @@ class FAQ extends Component { //classe faq
                         {/**container da linha 1 */}
                         <div className="row justify-content-around">
                             {/**coluna da esquerda */}
-                            <div className="col-sm-12 col-md-3 cartao">
+                            <div className="col-sm-12 col-md-3 cartaoo">
                                 <p className="num">Missão</p>
                                 <p className="titulo">Comunidades</p>
                                 <p >Fortalecer economias locais por meio da oferta e demanda de prestações de serviços nas comunidades.</p>
                             </div>
                             {/**coluna do meio */}
-                            <div className="col-sm-12 col-md-3 cartao">
+                            <div className="col-sm-12 col-md-3 cartaoo">
                                 <p className=" num">Visão</p>
                                 <p className=" titulo">Prosperidade</p>
                                 <p >Ser referência nas prestações de serviços das cidades brasileiras, com o objetivo de inspirar comunidades a construir um futuro com economias locais mais integradas e prósperas.</p>
                             </div>
                             {/**coluna da direita */}
-                            <div className="col-sm-12 col-md-3 cartao">
+                            <div className="col-sm-12 col-md-3 cartaoo">
                                 <p className=" num">Valores</p>
                                 <p className=" titulo">Empoderar</p>
                                 <p >Empoderar comunidades; Facilitar as relações profissionais nas cidades brasileiras; Atender demandas locais; Divulgar prestadores de serviços regionais; Desburocratizar prestações de serviços.</p>

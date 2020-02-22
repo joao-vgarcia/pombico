@@ -1,8 +1,8 @@
 .logo{
-    max-width: 50px;
-    max-height: 50px;
+    width: 50px;
+    height: 55px;
     margin-left: 40px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 
@@ -14,8 +14,16 @@
 .fote{
     align-self: center;
     text-align: center;
+    font-size: 24px;
 }
 .aas{
     margin-left: 50px;
+}
+
+.logoo{
+    width: 70px;
+    height: 90px;
+    margin-left: 50px;
+    margin-right: 10px;
 }
 
