@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../src/imagens/logoPombo.PNG';
 import './Navbar.css';
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default class Navbar extends Component {
     constructor() {
@@ -66,9 +67,9 @@ export default class Navbar extends Component {
                 <div>
 
                     <nav className="navbar navbar-expand-lg navbar-dark bg-white text-dark" id="branco">
-                        <p className='logomenu'><Link to="/home" onClick={this.mudacor0.bind(this)}><img src={logo} className=' logo' /></Link></p>
+                        <p className='logomenu'><Link to="/home" onClick={this.mudacor0.bind(this)}><img src={logo} className=' logo' alt="Logo"/></Link></p>
                         <Link className="logoescrito" to="/home" onClick={this.mudacor0.bind(this)} >PomBico</Link>
-                        <button className="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span className="navbar-toggler-icon"></span></button>
+                        <button className="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"><span className=""><GiHamburgerMenu style={{fontSize:"35px", color:"white"}}/></span></button>
                         <div className="collapse navbar-collapse" id="collapsibleNavbar">
                                 <ul className="navbar-nav mx-auto">
 
