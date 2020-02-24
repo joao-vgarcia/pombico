@@ -1,16 +1,15 @@
 import React, { Component } from 'react'; //importando componentes do reac
 import './home.css'; //importanto estilos pelo css
 import { IoIosArrowRoundBack, IoIosArrowRoundForward} from 'react-icons/io'; //importanto icone
-import {FaAndroid, FaAppStore} from "react-icons/fa"
+
 //importando imagens pelo diretório de imagens
 import seguranca from '../imagens/seguranca.svg'
 import mapa from '../imagens/mapa.svg'
 import okicone from '../imagens/okicone.svg'
-import backk from '../imagens/logoPombo.PNG'
+
 import homem from '../imagens/homem.png'
 import mulher from '../imagens/mulher.svg'
-import android from '../imagens/android.svg'
-import ios from '../imagens/ios.svg'
+
 //fim da importação das imagens
 
 

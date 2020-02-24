@@ -3,20 +3,16 @@ import React, { Component } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import pombo from "../imagens/pombo1.PNG"
 
+
 class Login extends Component {
     constructor() {
         super()
         this.state = {
-            username: "",
+            
             email: "",
-            sexo: "",
-            celular: "",
-            estado: "",
+         
             senha: "",
-            userdate: "",
-            cpf: "",
-            cep: "",
-            categoria:0,
+          
             esp1:"",
             esp2:"",
             esp3:"",
@@ -27,13 +23,8 @@ class Login extends Component {
             redirecionarPrest : false
         }
     }
-    alterarUsername = e => {
-        this.setState({ email: e.target.value })
-        // console.log(this.state.username)
-    }
-    alterarPassword = e => {
-        this.setState({ password: e.target.value })
-    }
+   
+  
     submeterFormLogin = e => {
         
         this.setState({ redirecionar: true })
@@ -46,11 +37,11 @@ class Login extends Component {
         this.setState({redirecionarCli : true})
     }
     aletrarEspecializacao = (e) =>{
-        if(e.target.value == 1){
+        if(e.target.value === 1){
             this.setState({
-                esp1 : "Front-end",esp2:"Back-end",esp3:"Fullstack", categoriaFinal : "informatica"
+                esp1 : "Front-end",esp2:"Back-end", esp3:"Fullstack", categoriaFinal : "informatica"
             })
-        }else if(e.target.value == 2){
+        }else if(e.target.value ===  2){
             this.setState({
                 esp1 : "Photoshop",esp2:"Desing web",esp3:"Paint", categoriaFinal:"desing"
             })
@@ -62,41 +53,17 @@ class Login extends Component {
     fixarEsp = e =>{
         this.setState({especializacao : e.target.value})
     }
-    cpf = (event) => {
-        this.setState({
-            cpf: event.target.value
-        })
-    }
-    cep = (event) => {
-        this.setState({
-            cep: event.target.value
-        })
-    }
-    handleUsernameChange = (event) => {
-        this.setState({
-            username: event.target.value
-        })
-    }
-    handleUserdateChange = (event) => {
-        this.setState({
-            userdate: event.target.value
-        })
-    }
+ 
+
+ 
+ 
     handleEmailChange = (event) => {
         this.setState({
             email: event.target.value
         })
     }
-    handleSexoChange = (event) => {
-        this.setState({
-            sexo: event.target.value
-        })
-    }
-    handleCelularChange = (event) => {
-        this.setState({
-            celular: event.target.value
-        })
-    }
+  
+ 
     handleSenhaChange = (event) => {
         this.setState({
             senha: event.target.value
@@ -139,10 +106,10 @@ class Login extends Component {
 
                             <div className="form-row justify-content-center ">
                                 <div className="input-group mb-3 justify-content-center">
-                                    <input className="col-9 form-control login" type="email" value={this.state.email} onChange={this.alterarUsername}  placeholder="Digite seu email" />
+                                    <input className="col-9 form-control login" type="email" value={this.state.email} onChange={this.handleEmailChange}  placeholder="Digite seu email" />
                                 </div>
                                 <div className="input-group mb-3 justify-content-center">
-                                    <input className="col-9 form-control login" type="password" value={this.state.password} onChange={this.alterarPassword} placeholder="Digite sua senha" />
+                                    <input className="col-9 form-control login" type="password" value={this.state.password} onChange={this.handleSenhaChange} placeholder="Digite sua senha" />
                                 </div>
                                 <div className="input-group-append">
                                     <button className=" btn btn-block envbtn" type="submit" value="Entrar">Entrar</button>
@@ -186,7 +153,7 @@ class Login extends Component {
                     
                         <div className="d-none d-md-block"><br /></div><div className="d-block"><br /></div>
                         <div className="row col-12 justify-content-center">
-                            <img src={pombo} className="my-10 d-none d-sm-none d-md-block " />
+                            <img src={pombo} className="my-10 d-none d-sm-none d-md-block " alt="Pombico" />
                         </div>
                         
                     

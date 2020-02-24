@@ -1,6 +1,6 @@
 import React, { Component } from 'react'; //importando react
 import './faq.css'; //importando estilos css
-import { GoChevronDown } from "react-icons/go" //icones do react importados
+
 import jvg from "../imagens/jvg.png"
 import camilam from "../imagens/camilam.PNG"
 import jenifer from "../imagens/djenifer.PNG"
