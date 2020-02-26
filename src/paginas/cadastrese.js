@@ -4,6 +4,7 @@ import "./cadastrese.css";//importando o arquivo css
 
 
 import Cliente from "./perfilcliente"
+import { Redirect } from 'react-router-dom';
 
 class Form extends Component {//inicio da classe formulario de cadastro
     //metodo construtor com as variaveis usadas
@@ -32,6 +33,14 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
     //metodos para instanciar os objetos
     //as funções já estão com o bind(this)
+    red = (e) =>{
+        if(this.state.cep != "" && this.state.username != "" && this.state.userdate != "" && this.state.email != "" && this.state.celular != "" && this.state.sexo != "" && this.state.senha != ""){
+            this.setState({redirecionar:true})
+        }else{
+            alert('Preencha todos os campos')
+        }
+        e.preventDefault()
+    }
     handleUserdateChange = (event) =>{
         this.setState({userdate:event.target.value})
     }
@@ -39,27 +48,23 @@ class Form extends Component {//inicio da classe formulario de cadastro
         this.setState({cep:evento.target.value})
        
     }
-    componentDidMount = () =>{
-        let URL = `http://viacep.com.br/ws/${this.state.cep}/json/`
-           fetch(URL)
-           .then(function(response) {
-              let data = response.json()
-              return data;
-           })
-           .then((json) => {
-              
-              this.setState({resposta : json});
-              console.log(this.state.resposta.logradouro)
-
-           })
-           .catch(function(ex) {
-              console.log('parsing failed', ex)
-           })
-  }
-    verificar = () =>{
-        console.log(`http://viacep.com.br/ws/${this.state.cep}/json/`)
-        
-    }
+     verificar = () =>{
+         let URL = `https://viacep.com.br/ws/${this.state.cep}/json/`
+            fetch(URL, {mode:'cors'})
+            
+            .then(function(response) {
+               let data = response.json()
+               return data;
+            })
+            .then((json) => {
+                this.setState({resposta : json});
+  
+            })
+            .catch(function(ex) {
+               console.log('parsing failed', ex)
+            })
+}
+   
     handleUsernameChange = (event) => {
         this.setState({
             username: event.target.value
@@ -85,58 +90,33 @@ class Form extends Component {//inicio da classe formulario de cadastro
             senha: event.target.value
         })
     }
+ 
+  
     //fim
     //metodo para redirecionar
-    red= () => {
-    //quando chama esse metodo ele coloca o redirecionar como true
-    //então quando chamar é pq foi feito o cadastro e segue para a página dentro da rota que o redirecionar encaminhar
-    let vai = 0
-    if(this.state.username != ""){
-        vai += 1
-    }if(this.state.email != ""){
-        vai += 1
-    }if(this.state.sexo != ""){
-        vai += 1
-    }if(this.state.celular != ""){
-        vai += 1
-    }if(this.state.userdate != ""){
-        vai += 1
-    }if(this.state.cpf != ""){
-        vai += 1
-    }if(this.state.cep != ""){
-        vai += 1
-    }if(this.state.resposta != ""){
-        vai += 1
-    }if(this.state.senha != ""){
-        vai += 1
-    }
-
-    if(vai == 9){
-        this.setState({redirecionar:true})
-    }
-    
-
-        
-    }
+   
     render() {
+        if(this.state.redirecionar){
+            //Quando rederizar a primeira vez ele vai ver que não foi feito o cadastro false
+            //então vai passar para o else
+            //quando o cadastro for feito ele redireciona com a rota para a pagina do cliente
+            return <Cliente 
+            nome={this.state.username}
+            email = {this.state.email}
+            sexo = {this.state.sexo}
+            celular = {this.state.celular}
+            nascimento = {this.state.userdate}
+            rua = {this.state.resposta.logradouro}
+            vila = {this.state.resposta.bairro}
+            cidade = {this.state.resposta.localidade}
+            />
+                        
+            
+            
+            //o direcionamento fica dentro do return
+        }else{ //colocar um } no final de tudo
        
-            if(this.state.redirecionar){
-                //Quando rederizar a primeira vez ele vai ver que não foi feito o cadastro false
-                //então vai passar para o else
-                //quando o cadastro for feito ele redireciona com a rota para a pagina do cliente
-    
-                return <Cliente 
-                nome={this.state.username}
-                email = {this.state.email}
-                sexo = {this.state.sexo}
-                celular = {this.state.celular}
-                nascimento = {this.state.userdate}
-                rua = {this.state.resposta.logradouro}
-                vila = {this.state.resposta.bairro}
-                cidade = {this.state.resposta.localidade}
-                />
-                //o direcionamento fica dentro do return
-            }else{
+            
             return (
                 //todo o codigo é renderizado aqui dentro, no final o botão chama os valores
                 <div>
@@ -243,9 +223,9 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                 <label className="col-sm-12 col-md-5 mx-auto texto">CEP</label>
     
                                 <input required type="number"
-                                    value={this.state.cep}
+                                    
                                     onChange={this.handleCEP}
-                                    onBlur={this.componentDidMount}
+                                    
                                    
                                     className="form-control col-sm-12 col-md-7 mx-auto" 
                                     placeholder="CEP"/>
@@ -253,9 +233,12 @@ class Form extends Component {//inicio da classe formulario de cadastro
                             </div>
                             <div className="form-row">
                                 <label className="col-sm-12 col-md-5 texto">Endereço</label>
+                                <button type='button' className="col-sm-12 col-md-3 botaocad" style={{fontSize:'15px'}} onClick={this.verificar}>Verifique seu cep</button>
+                                <label >{this.state.resposta.logradouro}<br/>
+                                        {this.state.resposta.bairro}<br/>
+                                        {this.state.resposta.localidade}</label>
     
-                            <label>{this.state.resposta.logradouro} <br/> {this.state.resposta.bairro}<br/> {this.state.resposta.localidade}</label>
-    
+                     
                             </div>
                             <div className="d-none d-md-block"><br /></div>
                             <div className="form-row">
@@ -285,7 +268,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                              * Dentro do botão deve ter todos os metodos para criar um usuário
                              */}
                             <div className="row justify-content-center">
-                                <button type="submit" className="btn btn-block botaocad col-sm-12 col-md-7" onClick={this.red.bind(this)}>Continuar</button>
+                                <button type="button" className="btn btn-block botaocad col-sm-12 col-md-7" onClick={this.red.bind(this)}>Continuar</button>
                             </div>
     
                             {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -300,8 +283,8 @@ class Form extends Component {//inicio da classe formulario de cadastro
     
                 </div>
             )
-        }
+        
     
-        }
+        }}
 }
 export default Form //exporta a classe
