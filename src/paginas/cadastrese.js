@@ -233,7 +233,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                             </div>
                             <div className="form-row">
                                 <label className="col-sm-12 col-md-5 texto">Endereço</label>
-                                <button type='button' className="col-sm-12 col-md-3 botaocad" style={{fontSize:'15px'}} onClick={this.verificar}>Verifique seu cep</button>
+                                <button type='button' className="btn col-sm-12 col-md-3 botaocad" style={{fontSize:'15px'}} onClick={this.verificar}>Verifique seu cep</button>
                                 <label >{this.state.resposta.logradouro}<br/>
                                         {this.state.resposta.bairro}<br/>
                                         {this.state.resposta.localidade}</label>
