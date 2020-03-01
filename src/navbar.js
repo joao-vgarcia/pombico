@@ -83,8 +83,6 @@ export default class Navbar extends Component {
                                         <Link className="nav-link"  to="/perguntas" style={{backgroundColor:this.state.cor4, borderRadius: this.state.borda, color: this.state.fonte4}}  onClick={this.mudacor4.bind(this)}  >Perguntas Frequentes</Link>
                                     </li>
                                     
-                                </ul>
-                                <ul className="navbar-nav justify-end">
                                      <li className="nav-item" >
                                         <Link to="/login" className="nav-link"  style={{ backgroundColor: this.state.cor7, borderRadius: this.state.borda, color: this.state.fonte7}} onClick={this.mudacor7.bind(this)}>Entre ou cadastre-se</Link>
                                     </li>
