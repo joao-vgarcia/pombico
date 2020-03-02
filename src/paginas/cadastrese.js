@@ -1,6 +1,6 @@
 import React, { Component} from 'react'; //importanto do react
 import "./cadastrese.css";//importando o arquivo css
-import api from '../Services/api'
+//import api from '../Services/api'
 
 
 

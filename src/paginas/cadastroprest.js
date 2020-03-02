@@ -288,17 +288,17 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                  * apenas manipular o json para criar as coisas
                                  */}
                                     <div className="form-row">
-                                        <label className="col-sm-12 col-md-5 texto">CEP</label>
-
-                                        <input type="number"
-                                            value={this.state.cep}
-                                            onChange={this.handleCEP}
-                                            
-                                            className="form-control col-sm-12 col-md-7"
-                                            placeholder="XXXXX-XXX" 
-                                            required/>
-
-                                    </div>
+                                <label className="col-sm-12 col-md-5 mx-auto texto">CEP</label>
+    
+                                <input required
+                                    type="text"
+                                    onChange={this.handleCEP}
+                                    
+                                    maxLength={8}
+                                    className="form-control col-sm-12 col-md-7 mx-auto" 
+                                    placeholder="CEP"/>
+    
+                            </div>
                                     <div className="d-none d-md-block"><br /></div>
                                 
                                     <div className="form-row ">
