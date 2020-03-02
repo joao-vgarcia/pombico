@@ -44,24 +44,20 @@ body{
 }
 .seguro{ /*background dentro da div row seguro e confiavel*/
     background-color:  #3490dc;
-    color: #065243;
-    text-align: center;
-   
+    color: #67eba2;
 }
 .textoseguro{ /*texto dentro da div row seguro e confiavel*/
     color:white;
     font-size: 25px;
-    text-align: center;
 }
 .rapido{/*background dentro da div row rapido e facil*/
     background-color:#30305d;
     color: #67eba2;
-    text-align: center;
+
 }
 .textorapido{ /*texto dentro da div row rapido e facil*/
     color:white;
     font-size: 25px;
-    text-align: center;
 }
 #baixar{
     color: #32329C;;
@@ -86,5 +82,3 @@ body{
     background-color: #3490dc;
     color:white;
 }
-
-

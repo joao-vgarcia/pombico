@@ -9,11 +9,11 @@
     color: #160C71;
 }
 .btnCancelar{
-    background-color: grey;
-    border-radius: 15px;
-    height: 40px;
+    border-radius: 25px;
+    background-color: #160C71;
     color: white;
     font-size: 20px;
+
 }
 .btnCancelar:hover{
     color: azure;

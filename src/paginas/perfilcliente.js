@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import "./perfilcliente.css";
 
-import homem from '../imagens/homem.png'
+import homem from '../imagens/perfil.PNG'
+import {Redirect} from'react-router-dom'
 
 import { IoIosStar } from 'react-icons/io';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
@@ -9,8 +10,20 @@ import { IoIosCheckmarkCircle } from 'react-icons/io';
 
 
 class Perfilcliente extends Component {
-  
+    constructor() {
+        super()
+        this.state = {
+          redirecionar:false
+        
+        }
+    }
+  cadastrar =()=>{
+      this.setState({redirecionar:true})
+  }
     render() {
+        if(this.state.redirecionar){
+            return <Redirect to='busca'/>
+        }else{
         return (
             <div>
                 <div className="">
@@ -25,7 +38,7 @@ class Perfilcliente extends Component {
                         <div className="row justify-content-between">
                             <div className="col-sm-12 col-md-4">
                                 <div className="card">
-                                    <img className="card-img-top img-fluid" src={homem} alt="Card image" />
+                                    <img className="card-img-top img-fluid" src={homem} alt="Seu perfil" />
                                     <div className="card-body">
                                         <h4 className="clienteh4 card-tittle">{this.props.nome}</h4>
                                         <h4 className="clienteh4 card-text"><IoIosStar /> 4.5</h4>
@@ -79,9 +92,9 @@ class Perfilcliente extends Component {
                     <div className="d-block"><br /></div>
 
                     <div className="container">
-                        <div className="row justify-content-between">
-                            <button type="button" className="btn btn-block col-sm-12 col-md-3 btnCancelar">Cancelar</button>
-                            <button type="button" className="btn btn-block col-sm-12 col-md-3 btnSalvar">Salvar</button>
+                        <div className="row justify-content-center">
+                            <button type="button" className="btn btn-block col-sm-12 col-md-3 btnCancelar " onClick={this.cadastrar}>Cadastrar novos serviços</button>
+                            
                         </div>
                     </div>
                     <div className="d-block"><br /><br /></div>
@@ -89,5 +102,6 @@ class Perfilcliente extends Component {
             </div>
         )
     }
+}
 }
 export default Perfilcliente

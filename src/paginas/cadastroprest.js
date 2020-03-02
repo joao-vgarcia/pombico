@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; //importanto do react
 import "./cadastroprest.css";//importando o arquivo css
 
-import Cliente from "./perfilcliente"
+import Prestador from "./perfilprestador"
 
 class Form extends Component {//inicio da classe formulario de cadastro
     //metodo construtor com as variaveis usadas
@@ -29,11 +29,19 @@ class Form extends Component {//inicio da classe formulario de cadastro
         }
     }
     red = (e) =>{
-        if(this.state.cep != "" && this.state.username != "" && this.state.userdate != "" && this.state.email != "" && this.state.celular != "" && this.state.sexo != "" && this.state.senha != "" && this.state.categoriaFinal != "" && this.state.especializacao != ""){
-            this.setState({redirecionar:true})
-        }else{
-            alert('Preencha todos os campos')
+        if(this.state.userdate !== "" || this.state.userdate !== " "){
+            var idade = new Date(this.state.userdate)
+            var maiorIdade = new Date('2002-01-01')
+            if(maiorIdade <= idade){
+                alert('O usuário não pode ser menor de idade')
+            }else{
+                if(this.state.cep !== "" && this.state.username !== "" && this.state.email !== "" && this.state.celular !== "" && this.state.sexo !== "" && this.state.senha !== "" && this.state.categoriaFinal !== "" && this.state.especializacao !== ""){
+                    this.setState({redirecionar:true})
+                }else{
+                    alert('Preencha todos os campos')
+                }
         }
+    }
         e.preventDefault()
     }
     alterarUsername = e => {
@@ -43,17 +51,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
     alterarPassword = e => {
         this.setState({ password: e.target.value })
     }
-    submeterFormLogin = e => {
-        
-        this.setState({ redirecionar: true })
-        e.preventDefault()
-    }
-    submeterFormPrestador = e =>{
-        this.setState({redirecionarPrest : true})
-    }
-    submeterFormCliente = e =>{
-        this.setState({redirecionarCli : true})
-    }
+  
     aletrarEspecializacao = (e) =>{
         if(e.target.value == 1){
             this.setState({
@@ -67,33 +65,59 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
 
     }
+    fixarEsp = e =>{
+        if(this.state.categoriaFinal == 'informatica'){
+            if(e.target.value == 1){
+                this.setState({especializacao : 'Front-end'})
+            }else if(e.target.value == 2){
+                this.setState({especializacao : 'Back-end'})
+            }else{
+                this.setState({especializacao : 'Fullstack'})
+            }
+        }
+        if(this.state.categoriaFinal == 'design'){
+            if(e.target.value == 1){
+                this.setState({especializacao : 'Photoshop'})
+            }else if(e.target.value == 2){
+                this.setState({especializacao : 'Design web'})
+            }else{
+                this.setState({especializacao : 'Paint'})
+            }
+        }
+        
+        
+        
+        
+    }
     handleCEP=(evento)=>{
         this.setState({cep:evento.target.value})
        
     }
     verificar = () =>{
        
-         let URL = `https://viacep.com.br/ws/${this.state.cep}/json/unicode/`
+        if(Number(this.state.cep)){
+            
         
-            fetch(URL,{mode:'cors'})
+            let URL = `https://viacep.com.br/ws/${this.state.cep}/json/`
+            fetch(URL, {mode:'cors'})
+            
             .then(function(response) {
                let data = response.json()
                return data;
             })
             .then((json) => {
-              
-               this.setState({resposta : json});
-               console.log(this.state.resposta.logradouro)
-
+                this.setState({resposta : json});
+   
             })
             .catch(function(ex) {
                console.log('parsing failed', ex)
             })
+           }else{
+               alert('Digite apenas números ex:12345000')
+           }
   }
 
-    fixarEsp = e =>{
-        this.setState({especializacao : e.target.value})
-    }
+    
     cpf = (event) => {
         this.setState({
             cpf: event.target.value
@@ -147,7 +171,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
             //então vai passar para o else
             //quando o cadastro for feito ele redireciona com a rota para a pagina do cliente
 
-            return <Cliente 
+            return <Prestador 
             nome={this.state.username}
             email = {this.state.email}
             sexo = {this.state.sexo}
@@ -156,6 +180,8 @@ class Form extends Component {//inicio da classe formulario de cadastro
             rua = {this.state.resposta.logradouro}
             vila = {this.state.resposta.bairro}
             cidade = {this.state.resposta.localidade}
+            categoria={this.state.categoriaFinal}
+            especializacao = {this.state.especializacao}
             />
             //o direcionamento fica dentro do return
         }else{
@@ -262,17 +288,17 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                  * apenas manipular o json para criar as coisas
                                  */}
                                     <div className="form-row">
-                                        <label className="col-sm-12 col-md-5 texto">CEP</label>
-
-                                        <input type="number"
-                                            value={this.state.cep}
-                                            onChange={this.handleCEP}
-                                            
-                                            className="form-control col-sm-12 col-md-7"
-                                            placeholder="XXXXX-XXX" 
-                                            required/>
-
-                                    </div>
+                                <label className="col-sm-12 col-md-5 mx-auto texto">CEP</label>
+    
+                                <input required
+                                    type="text"
+                                    onChange={this.handleCEP}
+                                    
+                                    maxLength={8}
+                                    className="form-control col-sm-12 col-md-7 mx-auto" 
+                                    placeholder="CEP"/>
+    
+                            </div>
                                     <div className="d-none d-md-block"><br /></div>
                                 
                                     <div className="form-row ">
@@ -326,9 +352,9 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                                 <label className="col-sm-12 col-md-5 texto">Especialidade</label>
                                                 <select required className="form-control col-sm-12 col-md-7" onChange={this.fixarEsp}>
                                                     <option value=""></option>
-                                                    <option value={1}>{this.state.esp1}</option>
-                                                    <option value={2}>{this.state.esp2}</option>
-                                                    <option value={3}>{this.state.esp3}</option>
+                                                    <option value={1} >{this.state.esp1}</option>
+                                                    <option value={2} >{this.state.esp2}</option>
+                                                    <option value={3} >{this.state.esp3}</option>
 
                                                 </select>
                                             </div>
