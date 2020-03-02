@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./perfilprestador.css";
 
 import homem from '../imagens/homem.png'
-import { Link } from 'react-router-dom';
+
 import { IoIosStar } from 'react-icons/io';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 import { MdSchedule } from 'react-icons/md';
@@ -23,7 +23,7 @@ class Perfilprest extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-12 col-md-3">
-                                <img src={homem} className="img-fluid"></img>
+                                <img src={homem} className="img-fluid" alt="Imagem de perfil"/>
                             </div>
                             <div className="col-sm-12 col-md-9">
                                 <p>Soy de familia gastronómica y náutica. Amo navegar y transmitir conocimientos. Soy la tercer generación náutica en mi familia. Estudie rendí las habilitaciones de Timonel de yate, Patrón de yate vela motor y actualmente estoy cursando la la carrera de Piloto de yate vela motor (habilitación náutica que permite cruzar el Océano y navegar por todo el mundo sin restricciones).</p>

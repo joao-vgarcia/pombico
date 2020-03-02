@@ -1,11 +1,7 @@
 import React, { Component } from 'react'; //importando react
 import './faq.css'; //importando estilos css
 import { GoChevronDown } from "react-icons/go" //icones do react importados
-import jvg from "../imagens/jvg.png"
-import camilam from "../imagens/camilam.PNG"
-import jenifer from "../imagens/djenifer.PNG"
-import vinicius from "../imagens/vinicius.PNG"
-import yasmin from "../imagens/yasmin.PNG"
+
 
 
 export default class Perguntas extends Component { //classe faq
@@ -37,13 +33,8 @@ export default class Perguntas extends Component { //classe faq
                             {/**Botão collapse
                              * Quando clica o botão expande
                              */}
-                            <button className="btn btn-block" type="button" data-toggle="collapse" data-target="#pq"><p>Por que usar o Faz um bico?<GoChevronDown className="float-right" /></p></button>
-                            {/**!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-                              * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                              * Precisamos arrumar as perguntas frequentes
-                              * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                              * !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                              */}
+                            <button className="btn btn-block" type="button" data-toggle="collapse" data-target="#pq"><p>Por que usar o Pombico?<GoChevronDown className="float-right" /></p></button>
+                    
                             <div id="pq" className="collapse">
                                 <p>Porque somos uma empresa que busca atender as necessidades
 nossos clientes com excelência e sempre priorizando a qualidade
@@ -72,7 +63,7 @@ e o mais próximo possível de você.</p>
                     <hr />
                     <div className="row justify-content-center">
                         <div className="col-9">
-                            <button className="btn btn-block" type="button" data-toggle="collapse" data-target="#profissional"><p>Como contrato um porfissional?<GoChevronDown className="float-right" /></p></button>
+                            <button className="btn btn-block" type="button" data-toggle="collapse" data-target="#profissional"><p>Como contrato um profissional?<GoChevronDown className="float-right" /></p></button>
 
                             <div id="profissional" className="collapse">
                                 <p>Primeiro, cadastre-se em nosso site e escolha a opção "Quero ser um cliente". Insira suas informações básicas e específicas

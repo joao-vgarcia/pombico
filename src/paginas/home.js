@@ -1,11 +1,17 @@
 import React, { Component } from 'react'; //importando componentes do reac
 import './home.css'; //importanto estilos pelo css
+<<<<<<< HEAD
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io'; //importanto icone
 //import {FaAndroid, FaAppStore} from "react-icons/fa"
+=======
+import { IoIosArrowRoundBack, IoIosArrowRoundForward} from 'react-icons/io'; //importanto icone
+
+>>>>>>> 28f9475e48b69ae6ac54123d78ec20b0a960b9a4
 //importando imagens pelo diretório de imagens
 import seguranca from '../imagens/seguranca.svg'
 import mapa from '../imagens/mapa.svg'
 import okicone from '../imagens/okicone.svg'
+<<<<<<< HEAD
 //import backk from '../imagens/logoPombo.PNG'
 import shield from '../imagens/shield.png'
 import run from '../imagens/run.png'
@@ -15,6 +21,12 @@ import beleza from '../imagens/beleza.png'
 import register from '../imagens/register.png'
 //import android from '../imagens/android.svg'
 //import ios from '../imagens/ios.svg'
+=======
+
+import homem from '../imagens/homem.png'
+import mulher from '../imagens/mulher.svg'
+
+>>>>>>> 28f9475e48b69ae6ac54123d78ec20b0a960b9a4
 //fim da importação das imagens
 
 
