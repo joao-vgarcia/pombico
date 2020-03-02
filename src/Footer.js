@@ -8,7 +8,7 @@ import {TiSocialFacebook, TiSocialInstagram, TiSocialLinkedin, TiSocialTwitter, 
 class Footer extends Component {
     render() {
         return (
-
+            <div>
             
                 <div className="container-fluid ">
                     <hr />
@@ -86,7 +86,8 @@ class Footer extends Component {
 
                     
                 </div>
-
+                </div>
+                </div>
 
 
 

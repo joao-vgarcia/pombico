@@ -4,7 +4,7 @@ import './home.css'; //importanto estilos pelo css
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io'; //importanto icone
 //import {FaAndroid, FaAppStore} from "react-icons/fa"
 
-import { IoIosArrowRoundBack, IoIosArrowRoundForward} from 'react-icons/io'; //importanto icone
+
 
 
 //importando imagens pelo diretório de imagens

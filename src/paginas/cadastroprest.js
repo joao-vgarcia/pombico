@@ -125,9 +125,7 @@ validarCPF = () =>{
         let ccpf =[]
         let contador =10
         let primeiro =0
-        if(this.state.cpf.length <11){
-            return false
-        }
+        
         for(let i =0; i<11; i++){
             cpf[i] = Number(this.state.cpf.substr(i,1 ))
         }

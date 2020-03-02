@@ -20,7 +20,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
             estado: "",
             senha: "",
             userdate:"",
-           
+            cpf:'',
             cep:"",
             resposta:[],
             redirecionar:false //variavel redirecionar serve para verificar se já foi feito login
@@ -81,6 +81,9 @@ class Form extends Component {//inicio da classe formulario de cadastro
         
        
     }
+    handlecpf=(e)=>{
+        this.setState({cpf:e.target.value})
+    }
     verificar = () =>{
         if(this.validarCPF()){
             if(Number(this.state.cep)){
@@ -112,9 +115,7 @@ validarCPF = () =>{
         let ccpf =[]
         let contador =10
         let primeiro =0
-        if(this.state.cpf.length <11){
-            return false
-        }
+       
         for(let i =0; i<11; i++){
             cpf[i] = Number(this.state.cpf.substr(i,1 ))
         }
@@ -159,6 +160,10 @@ validarCPF = () =>{
           
         
     }
+
+
+
+
     handleUsernameChange = (event) => {
         this.setState({
             username: event.target.value
@@ -254,7 +259,7 @@ validarCPF = () =>{
                                     onInput = {(e) =>{
                                         e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,11)
                                     }}
-                                    value={this.state.cpf} onChange={this.cpf} className="form-control col-sm-12 col-md-7" placeholder="CPF" />
+                                    value={this.state.cpf} onChange={this.handlecpf} className="form-control col-sm-12 col-md-7" placeholder="CPF" />
                                 </div>
     
                             {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
