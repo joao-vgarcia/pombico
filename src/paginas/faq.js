@@ -25,7 +25,7 @@ class FAQ extends Component { //classe faq
                         <div className="row justify-content-around">
                             {/**coluna da esquerda */}
                             <div className="col-sm-12 col-md-3 cartaoo">
-                                <h2 className="num"><b>Missão</b></h2>
+                                <p className="num">Missão</p>
                                 <p className="titulo">Comunidades</p>
                                 <p >Fortalecer economias locais por meio da oferta e demanda de prestações de serviços nas comunidades.</p>
                             </div>
@@ -60,7 +60,7 @@ class FAQ extends Component { //classe faq
                         <div className="row justify-content-around">
                             {/**coluna da esquerda camila */}
                             <div className="card" style={{ width: "330px", marginTop: "20px" }}>
-                                <img className="card-img-top" src={camilam} alt="Card image" />
+                                <img className="card-img-top" src={camilam} alt="Camila Moraes" />
                                 <div className="card-body">
                                     <h4 className="card-title">Camila Moraes</h4>
                                     <p className="card-text">Estudante de programação Recode-PRO</p>
@@ -80,7 +80,7 @@ class FAQ extends Component { //classe faq
                             </div>
                             {/**coluna do centro jenifer */}
                             <div className="card" style={{ width: "330px", marginTop: "20px" }}>
-                                <img className="card-img-top" src={jenifer} alt="Card image" />
+                                <img className="card-img-top" src={jenifer} alt="Jenifer" />
                                 <div className="card-body">
                                     <h4 className="card-title">Djenifer Rezende</h4>
                                     <p className="card-text">Estudante de programação Recode-PRO</p>
@@ -100,7 +100,7 @@ class FAQ extends Component { //classe faq
                             </div>
                             {/**coluna final joao */}
                             <div className="card" style={{ width: "330px", marginTop: "20px" }}>
-                                <img className="card-img-top" src={jvg} alt="Card image" />
+                                <img className="card-img-top" src={jvg} alt="Garcia" />
                                 <div className="card-body">
                                     <h4 className="card-title">João Vitor Garcia</h4>
                                     <p className="card-text">Estudante de programação Recode-PRO</p>
@@ -120,7 +120,7 @@ class FAQ extends Component { //classe faq
                             </div>
                             {/**coluna esquerda vinicius */}
                             <div className="card" style={{ width: "330px", marginTop: "20px" }}>
-                                <img className="card-img-top" src={vinicius} alt="Card image" />
+                                <img className="card-img-top" src={vinicius} alt="Vinicius" />
                                 <div className="card-body">
                                     <h4 className="card-title">Vinicius Gonçalves</h4>
                                     <p className="card-text">Estudante de programação Recode-PRO</p>
@@ -140,7 +140,7 @@ class FAQ extends Component { //classe faq
                             </div>
                             {/**coluna final yasmin */}
                             <div className="card" style={{ width: "330px", marginTop: "20px" }}>
-                                <img className="card-img-top" src={yasmin} alt="Card image" />
+                                <img className="card-img-top" src={yasmin} alt="Iasmim" />
                                 <div className="card-body">
                                     <h4 className="card-title">Yasmin Lira</h4>
                                     <p className="card-text">Estudante de programação Recode-PRO</p>

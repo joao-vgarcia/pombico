@@ -1,10 +1,12 @@
-import React, { Component , useEffect, useState} from 'react'; //importanto do react
+import React, { Component} from 'react'; //importanto do react
 import "./cadastrese.css";//importando o arquivo css
+import api from '../Services/api'
 
 
 
 import Cliente from "./perfilcliente"
-import { Redirect } from 'react-router-dom';
+
+
 
 class Form extends Component {//inicio da classe formulario de cadastro
     //metodo construtor com as variaveis usadas
@@ -18,8 +20,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
             estado: "",
             senha: "",
             userdate:"",
-            longitude:"",
-            latitude:"",
+           
             cep:"",
             resposta:[],
             redirecionar:false //variavel redirecionar serve para verificar se já foi feito login
@@ -33,36 +34,74 @@ class Form extends Component {//inicio da classe formulario de cadastro
 
     //metodos para instanciar os objetos
     //as funções já estão com o bind(this)
-    red = (e) =>{
-        if(this.state.cep != "" && this.state.username != "" && this.state.userdate != "" && this.state.email != "" && this.state.celular != "" && this.state.sexo != "" && this.state.senha != ""){
-            this.setState({redirecionar:true})
-        }else{
-            alert('Preencha todos os campos')
-        }
-        e.preventDefault()
+
+
+    red = async(e) =>{
+
+            // try {await api.post('/users',{
+            //     name: "qualuqer coisa",
+            //     email: "qualuqer@coisa",
+            //     password: "qualuqer coisa",
+            //     provider:true,
+            //     cnpj: "qualuqer coisa",
+            //     cep: "qualuqer coisa",
+            //     cep_number: 1,
+            //     phone: "qualuqer coisa"
+
+            // })}catch(err){console.log(err.response)}
+
+            if(this.state.userdate !== "" || this.state.userdate !== " "){
+                var idade = new Date(this.state.userdate)
+                var maiorIdade = new Date('2002-01-01')
+                if(maiorIdade <= idade){
+                    alert('O usuário não pode ser menor de idade')
+                }else{
+                    if(this.state.cep !== "" && this.state.username !== "" && this.state.email !== "" && this.state.celular !== "" && this.state.sexo !== "" && this.state.senha !== ""){
+                        this.setState({redirecionar:true})
+                    }else{
+                        alert('Preencha todos os campos')
+                    }
+
+
+                }
+            }
+            
+
+            
+            e.preventDefault()
+     
     }
     handleUserdateChange = (event) =>{
         this.setState({userdate:event.target.value})
     }
     handleCEP=(evento)=>{
-        this.setState({cep:evento.target.value})
+      
+            this.setState({cep:evento.target.value})
+        
+        
        
     }
      verificar = () =>{
-         let URL = `https://viacep.com.br/ws/${this.state.cep}/json/`
-            fetch(URL, {mode:'cors'})
+        if(Number(this.state.cep)){
             
-            .then(function(response) {
-               let data = response.json()
-               return data;
-            })
-            .then((json) => {
-                this.setState({resposta : json});
-  
-            })
-            .catch(function(ex) {
-               console.log('parsing failed', ex)
-            })
+        
+         let URL = `https://viacep.com.br/ws/${this.state.cep}/json/`
+         fetch(URL, {mode:'cors'})
+         
+         .then(function(response) {
+            let data = response.json()
+            return data;
+         })
+         .then((json) => {
+             this.setState({resposta : json});
+
+         })
+         .catch(function(ex) {
+            console.log('parsing failed', ex)
+         })
+        }else{
+            alert('Digite apenas números ex:12345000')
+        }
 }
    
     handleUsernameChange = (event) => {
@@ -222,11 +261,11 @@ class Form extends Component {//inicio da classe formulario de cadastro
                             <div className="form-row">
                                 <label className="col-sm-12 col-md-5 mx-auto texto">CEP</label>
     
-                                <input required type="number"
-                                    
+                                <input required
+                                    type="text"
                                     onChange={this.handleCEP}
-                                    
-                                   
+                                    minLength={8}
+                                    maxLength={8}
                                     className="form-control col-sm-12 col-md-7 mx-auto" 
                                     placeholder="CEP"/>
     
@@ -254,6 +293,8 @@ class Form extends Component {//inicio da classe formulario de cadastro
                                 <input required type="password"
                                     value={this.state.senha}
                                     onChange={this.handleSenhaChange}
+                                    minLength={6}
+                                    maxLength={14}
                                     className="form-control col-sm-12 col-md-7 mx-auto" />
                             </div>
     

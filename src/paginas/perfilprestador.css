@@ -1,7 +1,6 @@
 .btnSolicitar{
+    border-radius: 25px;
     background-color: #160C71;
-    border-radius: 15px;
-    height: 40px;
     color: white;
     font-size: 20px;
 }
