@@ -29,6 +29,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
         }
     }
     red = (e) =>{
+        
         if(this.state.userdate !== "" || this.state.userdate !== " "){
             var idade = new Date(this.state.userdate)
             var maiorIdade = new Date('2002-01-01')
@@ -94,35 +95,91 @@ class Form extends Component {//inicio da classe formulario de cadastro
        
     }
     verificar = () =>{
-       
-        if(Number(this.state.cep)){
+        if(this.validarCPF()){
+            if(Number(this.state.cep)){
             
         
-            let URL = `https://viacep.com.br/ws/${this.state.cep}/json/`
-            fetch(URL, {mode:'cors'})
-            
-            .then(function(response) {
-               let data = response.json()
-               return data;
-            })
-            .then((json) => {
-                this.setState({resposta : json});
-   
-            })
-            .catch(function(ex) {
-               console.log('parsing failed', ex)
-            })
-           }else{
-               alert('Digite apenas números ex:12345000')
-           }
+                let URL = `https://viacep.com.br/ws/${this.state.cep}/json/`
+                fetch(URL, {mode:'cors'})
+                
+                .then(function(response) {
+                   let data = response.json()
+                   return data;
+                })
+                .then((json) => {
+                    this.setState({resposta : json});
+       
+                })
+                .catch(function(ex) {
+                   console.log('parsing failed', ex)
+                })
+               }else{
+                   alert('Digite apenas números ex:12345000')
+               }
+        }
+       
+       
   }
+validarCPF = () =>{
+        let cpf =[]
+        let ccpf =[]
+        let contador =10
+        let primeiro =0
+        if(this.state.cpf.length <11){
+            return false
+        }
+        for(let i =0; i<11; i++){
+            cpf[i] = Number(this.state.cpf.substr(i,1 ))
+        }
+        for(let i=0; i<9; i++){
 
+          ccpf[i] = cpf[i]*contador
+          contador-- 
+          primeiro +=ccpf[i] 
+        }
+        let dig1 = 11 - (primeiro %11)
+        if(dig1>9){
+            dig1 = 0
+        }
+
+        for(let i =0; i<11; i++){
+            cpf[i] = Number(this.state.cpf.substr(i,1 ))
+        }
+        let contadorDois =11
+        let segundo =0 
+        for(let i=0; i<10; i++){
+
+          ccpf[i] = cpf[i]*contadorDois
+          contadorDois-- 
+          segundo +=ccpf[i] 
+        }
+        console.log(ccpf)
+        let dig2 = 11 - (segundo % 11)
+        if(dig2>9){
+            dig2 = 0
+        }
+        
+        console.log(cpf[9],cpf[10])
+
+         if(Number(cpf[9])==dig1 && Number(cpf[10])==dig2){
+             return true
+         }else{
+             alert('CPF falso')
+         }
+        
+
+           
+          
+        
+    }
     
     cpf = (event) => {
         this.setState({
             cpf: event.target.value
         })
+       
     }
+    
     cep = (event) => {
         this.setState({
             cep: event.target.value
