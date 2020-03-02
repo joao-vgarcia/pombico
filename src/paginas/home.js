@@ -11,7 +11,7 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward} from 'react-icons/io'; //i
 import seguranca from '../imagens/seguranca.svg'
 import mapa from '../imagens/mapa.svg'
 import okicone from '../imagens/okicone.svg'
-<<<<<<< HEAD
+
 //import backk from '../imagens/logoPombo.PNG'
 import shield from '../imagens/shield.png'
 import run from '../imagens/run.png'
@@ -21,7 +21,7 @@ import beleza from '../imagens/beleza.png'
 import register from '../imagens/register.png'
 //import android from '../imagens/android.svg'
 //import ios from '../imagens/ios.svg'
-=======
+
 
 import homem from '../imagens/homem.png'
 import mulher from '../imagens/mulher.svg'
