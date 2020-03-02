@@ -25,7 +25,7 @@ class FAQ extends Component { //classe faq
                         <div className="row justify-content-around">
                             {/**coluna da esquerda */}
                             <div className="col-sm-12 col-md-3 cartaoo">
-                                <p className="num">Missão</p>
+                                <h2 className="num"><b>Missão</b></h2>
                                 <p className="titulo">Comunidades</p>
                                 <p >Fortalecer economias locais por meio da oferta e demanda de prestações de serviços nas comunidades.</p>
                             </div>
