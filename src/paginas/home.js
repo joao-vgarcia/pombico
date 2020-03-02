@@ -1,12 +1,12 @@
 import React, { Component } from 'react'; //importando componentes do reac
 import './home.css'; //importanto estilos pelo css
-<<<<<<< HEAD
+
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from 'react-icons/io'; //importanto icone
 //import {FaAndroid, FaAppStore} from "react-icons/fa"
-=======
+
 import { IoIosArrowRoundBack, IoIosArrowRoundForward} from 'react-icons/io'; //importanto icone
 
->>>>>>> 879cced927841ad8b344846073ac35dfdb094cc6
+
 //importando imagens pelo diretório de imagens
 import seguranca from '../imagens/seguranca.svg'
 import mapa from '../imagens/mapa.svg'
@@ -26,7 +26,7 @@ import register from '../imagens/register.png'
 import homem from '../imagens/homem.png'
 import mulher from '../imagens/mulher.svg'
 
->>>>>>> 879cced927841ad8b344846073ac35dfdb094cc6
+
 //fim da importação das imagens
 
 
