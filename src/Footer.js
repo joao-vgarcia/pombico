@@ -8,8 +8,7 @@ import {TiSocialFacebook, TiSocialInstagram, TiSocialLinkedin, TiSocialTwitter, 
 class Footer extends Component {
     render() {
         return (
-<<<<<<< HEAD
-=======
+
             
                 <div className="container-fluid ">
                     <hr />
@@ -29,7 +28,7 @@ class Footer extends Component {
                         </div>
                         
                     </div>
->>>>>>> 879cced927841ad8b344846073ac35dfdb094cc6
+
 
                     </div>
                     
@@ -40,7 +39,7 @@ class Footer extends Component {
                                 <p className='fote'><MdCopyright /> 2020 Bico</p>
                             </div>
                         </div>
-<<<<<<< HEAD
+
                     </div>
                 </div>
 
@@ -59,7 +58,7 @@ class Footer extends Component {
                     <div className="row d-block d-sm-block d-md-none d-lg-none">
                         <div className="d-block d-sm-block d-md-none col-12">
                             <p className='fote'><TiSocialFacebook /> <TiSocialInstagram /> <TiSocialLinkedin /> <TiSocialTwitter /> <TiSocialYoutube />  </p>
-=======
+
                         <div className="row d-block d-sm-block d-md-none d-lg-none">
                             <div className="d-block d-sm-block d-md-none col-12">
                                 <p className='fote'><Link to="/home"  style={{marginLeft:"-50px"}}><img src={logo} className='logoo' alt="Logo"/></Link></p>
@@ -78,7 +77,6 @@ class Footer extends Component {
                                 <button className="btn btn-block" style={{backgroundColor:"#32329C", borderRadius:"35px", color:"white"}}>Baixe nosso app</button>
                             </div>
 
->>>>>>> 879cced927841ad8b344846073ac35dfdb094cc6
                         </div>
 
                     </div>
@@ -98,13 +96,3 @@ class Footer extends Component {
 }
 
 export default Footer;
-
-//colocar codigo a seguir para social da imagem antes de Faz um bico
-//<a class="navbar-brand"><img src="" alt="Logo" style="width:40px;"></img></a>
-
-//colocar para fazer os links dentro da navbar
-//precisa fazer o impor *nome* from './pagina
-//<Link className="nav-link" to="/*nome*" >Contato</Link>
-//import facebook from '../src/imagens/facebook.PNG';  //linha 5
-//<img src={facebook} className=' social'/> // linha 29
-//
