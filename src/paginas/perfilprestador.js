@@ -5,6 +5,7 @@ import homem from '../imagens/perfil.PNG'
 
 import { IoIosStar } from 'react-icons/io';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
+import { Redirect } from 'react-router-dom';
 
 
 
@@ -16,7 +17,17 @@ class Perfilprest extends Component {
         
         }
     }
+    redirecionamento =()=>{
+        this.setState({
+            redirecionar:true
+        })
+    }
     render() {
+        if(this.state.redirecionar){
+            return <Redirect to='/listar'/>
+        }else{
+
+        
         return (
             <div>
                 <div className="">
@@ -85,7 +96,7 @@ class Perfilprest extends Component {
                     <div className="d-block"><br /></div>
                     <div className="container">
                         <div className="row justify-content-center">
-                            <button type="button" className="btn btn-block col-sm-12 col-md-3 btnSolicitar ">Verificar serviços</button>
+                            <button type="button" className="btn btn-block col-sm-12 col-md-3 btnSolicitar " onClick={this.redirecionamento}>Verificar serviços</button>
                         </div>
                     </div>
                    
@@ -96,5 +107,6 @@ class Perfilprest extends Component {
             </div>
         )
     }
+}
 }
 export default Perfilprest
