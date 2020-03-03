@@ -13,6 +13,7 @@ import perfilprest from "./paginas/perfilprestador";
 import perfilcliente from "./paginas/perfilcliente";
 import cadastroprest from "./paginas/cadastroprest";
 import perguntas from "./paginas/perguntas"
+import listar from './paginas/listar'
 
 
 
@@ -25,13 +26,13 @@ function Routes() {
         <Route path="/Home" exact component={Home}/>
         <Route path="/faq" exact component={FAQ}/>
         <Route path="/cadastrese" exact component={cadastrase}/>
-      <Route path="/busca" exact component={busca}/>
+        <Route path="/busca" exact component={busca}/>
         <Route path="/login" exact component={login}/>
         <Route path="/perfilprest" exact component={perfilprest}/>
         <Route path="/perfilcliente" exact component={perfilcliente}/>
         <Route path="/cadastroPrest" exact component={cadastroprest}/>
         <Route path="/perguntas" exact component={perguntas}/>
-        
+        <Route path='/listar' exact component={listar}/>
     </Switch>
   );
 }
