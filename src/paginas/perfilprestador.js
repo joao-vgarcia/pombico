@@ -12,7 +12,7 @@ class Perfilprest extends Component {
     constructor() {
         super()
         this.state = {
-          
+          redirecionar:false
         
         }
     }

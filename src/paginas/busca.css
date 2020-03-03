@@ -1,14 +1,10 @@
 .conter{/* Classe do background azul */
     background-color: #3490dc;
-    color:white
+    color:white;
+    border-radius: 5px;
     
 }
-.pesquisa{
-    background-color: white;
-    color: black;
-    border-radius: 20px;
-    max-width: 700px;
-}
+
 .h1titulo{ /*Classe para titulos*/
     text-align: center;
 }
@@ -18,7 +14,7 @@
     border-radius: 15px;
     height: 60px;
     position: relative;
-    background-color: #3490dc;
+    background-color: #32329C;
     color: white;
     font-size: 30px;
 }

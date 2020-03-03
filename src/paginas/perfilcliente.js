@@ -7,6 +7,8 @@ import {Redirect} from'react-router-dom'
 import { IoIosStar } from 'react-icons/io';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 
+import Busca from '../paginas/busca'
+
 
 
 class Perfilcliente extends Component {
@@ -93,7 +95,32 @@ class Perfilcliente extends Component {
 
                     <div className="container">
                         <div className="row justify-content-center">
-                            <button type="button" className="btn btn-block col-sm-12 col-md-3 btnCancelar " onClick={this.cadastrar}>Cadastrar novos serviços</button>
+                       
+                            <button type="button" className="btn btn-block col-sm-12 col-md-3 btnCancelar " data-toggle="modal" data-target="#myModal">Cadastrar novos serviços</button>
+
+                            
+                            <div class="modal fade" id="myModal">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+
+                                        
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Nova solicitação</h4>
+                                        </div>
+
+                                        
+                                        <div class="modal-body">
+                                        <Busca/>
+                                        </div>
+
+                                        
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                             
                         </div>
                     </div>

@@ -75,12 +75,13 @@ class Busca extends Component {                 //classe busca
           
                 this.setState({redirecionar:true})
                
-                e.preventDefault()
+                
                 
                 
        
             }else{
                 alert('Preencha todos os campos')
+                e.preventDefault()
             }
            
          
@@ -89,30 +90,12 @@ class Busca extends Component {                 //classe busca
     }
 
     render() {
-        if(this.state.redirecionar){
-           return  <Redirect to='perfilcliente'/>
-        }else{
-
-        
+     
         return (
-            //div principal
-            <div>
-                { /* Container azul para fazer o fundo da tela*/}
-                <div className="container-fluid conter">                                                         
-                     
-                    {/* Div com o titulo linkando no css a classe*/}
-                    <div className="row">
-                        <div className=" mx-auto">                                                            
-                            <h2 className="h1titulo">Descreva o que você precisa e entre em contato com prestadores de serviços proximos a você</h2>
-                        </div>
-                    </div>                  
-
-                    {/**Formulário  inteiro */}
-                    <div className="container pesquisa">
-                        <form onSubmit={this.submeterForm} className="form-group">{/*metodo para aplicar as mudanças no método subeterForm*/}                      
+                     <form onSubmit={this.submeterForm} className="form conter">{/*metodo para aplicar as mudanças no método subeterForm*/}                      
                             <div className="form-row">
                                 {/**Parte de pesquisa de profissional por categoria */}
-                                <label className="col-10 mx-auto texto my-2">Qual categoria?</label>
+                                <label className="col-10 mx-auto texto" >Qual categoria?</label>
                                 {/*Formulário de input com as opções para ser escolhida */}      
                                 <select className="col-10 mx-auto form-control" onChange={this.alterarProfissional}>{/** Quando selecionado chama o método alterarProfissional, precisa existir os valores com value=** */}
                                     <option value=""></option>
@@ -156,19 +139,13 @@ class Busca extends Component {                 //classe busca
                             <div className="d-block"><br /></div>        
 
                         </form>
-                    </div>
-                    {/**Fim do formulário */}
-                    <div className="d-none d-md-block"><br /></div>
-                    <div className="d-block d-md-block"><br /></div>
-                    <div className="d-block d-md-block"><br /></div>
-                    {/*Div para aplicar uma quebra de linha de acordo o tamanho da tela */}
-                </div>
+                
 
 
-            </div>
+         
 
         )
-    }
+    
 }
 }
 
