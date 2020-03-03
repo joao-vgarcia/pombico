@@ -95,7 +95,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
        
     }
     verificar = () =>{
-        if(this.validarCPF()){
+        
             if(Number(this.state.cep)){
             
         
@@ -116,7 +116,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                }else{
                    alert('Digite apenas números ex:12345000')
                }
-        }
+        
        
        
   }
@@ -151,18 +151,18 @@ validarCPF = () =>{
           contadorDois-- 
           segundo +=ccpf[i] 
         }
-        console.log(ccpf)
+       
         let dig2 = 11 - (segundo % 11)
         if(dig2>9){
             dig2 = 0
         }
         
-        console.log(cpf[9],cpf[10])
+        
 
          if(Number(cpf[9])==dig1 && Number(cpf[10])==dig2){
              return true
          }else{
-             alert('CPF falso')
+             alert('CPF inválido')
          }
         
 
@@ -248,6 +248,7 @@ validarCPF = () =>{
             <div>
                 <div className="tudo "> {/**div dentro da div pra não ocorrer erros de render */}
                 {/**Primeiro container apenas com o titulo */}
+                
                     <div className="container">
                         <div className="row">
                             <div className="col-12">
@@ -284,6 +285,7 @@ validarCPF = () =>{
                                         }}
                                         value={this.state.cpf} 
                                         onChange={this.cpf} 
+                                        onBlur={this.validarCPF}
                                         className="form-control col-sm-12 col-md-7" 
                                         placeholder="CPF" 
                                         required
@@ -348,7 +350,7 @@ validarCPF = () =>{
                                 <input required
                                     type="text"
                                     onChange={this.handleCEP}
-                                    
+                                    onBlur={this.verificar}
                                     maxLength={8}
                                     className="form-control col-sm-12 col-md-7 mx-auto" 
                                     placeholder="CEP"/>
@@ -358,7 +360,7 @@ validarCPF = () =>{
                                 
                                     <div className="form-row ">
                                 <label className="col-sm-12 col-md-5 texto">Endereço</label>
-                                <button type='button' className="btn col-sm-12 col-md-3 botaocad" style={{fontSize:'15px'}} onClick={this.verificar}>Verifique seu cep</button>
+                           
     
                             <label>{this.state.resposta.logradouro} <br/> {this.state.resposta.bairro}<br/> {this.state.resposta.localidade}</label>
     

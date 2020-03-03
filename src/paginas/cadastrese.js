@@ -85,7 +85,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
         this.setState({cpf:e.target.value})
     }
     verificar = () =>{
-        if(this.validarCPF()){
+        
             if(Number(this.state.cep)){
             
         
@@ -106,7 +106,7 @@ class Form extends Component {//inicio da classe formulario de cadastro
                }else{
                    alert('Digite apenas números ex:12345000')
                }
-        }
+        
        
        
   }
@@ -152,7 +152,7 @@ validarCPF = () =>{
          if(Number(cpf[9])==dig1 && Number(cpf[10])==dig2){
              return true
          }else{
-             alert('CPF falso')
+             alert('CPF inválido')
          }
         
 
@@ -259,7 +259,10 @@ validarCPF = () =>{
                                     onInput = {(e) =>{
                                         e.target.value = Math.max(0, parseInt(e.target.value) ).toString().slice(0,11)
                                     }}
-                                    value={this.state.cpf} onChange={this.handlecpf} className="form-control col-sm-12 col-md-7" placeholder="CPF" />
+                                    value={this.state.cpf}
+                                     onChange={this.handlecpf} 
+                                     onBlur={this.validarCPF}
+                                     className="form-control col-sm-12 col-md-7" placeholder="CPF" />
                                 </div>
     
                             {/**Div para inserir uma quebra de linha de acordo com o tamanho da tela */}
@@ -324,6 +327,7 @@ validarCPF = () =>{
                                 <input required
                                     type="text"
                                     onChange={this.handleCEP}
+                                    onBlur={this.verificar}
                                     minLength={8}
                                     maxLength={8}
                                     className="form-control col-sm-12 col-md-7 mx-auto" 
@@ -332,7 +336,7 @@ validarCPF = () =>{
                             </div>
                             <div className="form-row">
                                 <label className="col-sm-12 col-md-5 texto">Endereço</label>
-                                <button type='button' className="btn col-sm-12 col-md-3 botaocad" style={{fontSize:'15px'}} onClick={this.verificar}>Verifique seu cep</button>
+                               
                                 <label >{this.state.resposta.logradouro}<br/>
                                         {this.state.resposta.bairro}<br/>
                                         {this.state.resposta.localidade}</label>
