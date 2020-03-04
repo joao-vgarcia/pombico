@@ -74,6 +74,7 @@ class Busca extends Component {                 //classe busca
             if(this.state.profissional != '' && !Number(this.state.profissional) && this.state.servico != '' && this.state.data !=''){
           
                 this.setState({redirecionar:true})
+                e.preventDefault()
                
                 
                 
