@@ -1,7 +1,7 @@
 import React, { Component } from 'react'; //importando react
 import './faq.css'; //importando estilos css
 
-import jvg from "../imagens/jvg.png"
+import jvg from "../imagens/jvg.JPG"
 import camilam from "../imagens/camilam.PNG"
 import jenifer from "../imagens/djenifer.PNG"
 import vinicius from "../imagens/vinicius.PNG"
