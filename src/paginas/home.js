@@ -22,11 +22,6 @@ import register from '../imagens/register.png'
 //import android from '../imagens/android.svg'
 //import ios from '../imagens/ios.svg'
 
-
-import homem from '../imagens/homem.png'
-import mulher from '../imagens/mulher.svg'
-
-
 //fim da importação das imagens
 
 
@@ -121,9 +116,9 @@ class Home extends Component { //criando a classe
                                 <div className="carousel-item active">
                                     <div className="row justify-content-center">
                                         <div className="col-sm-6 col-md-6 ">
-                                            <h2 className="num" style={{ paddingLeft: "140px" }}><b>1-</b></h2>
-                                            <h3 className="titulo" style={{ paddingLeft: "140px" }}><b>Cadastre-se</b></h3>
-                                            <h4 style={{ paddingLeft: "140px" }}>Seja você prestador ou cliente, é preciso realizar um rápido cadastro para a segurança de todos os usuários</h4>
+                                            <h2 className="num" style={{ paddingLeft: "90px" }}><b>1-</b></h2>
+                                            <h3 className="titulo" style={{ paddingLeft: "90px" }}><b>Cadastre-se</b></h3>
+                                            <h4 style={{ paddingLeft: "90px" }}>Seja você prestador ou cliente, é preciso realizar um rápido cadastro para a segurança de todos os usuários</h4>
                                         </div>
                                         <div className="col-sm-6 col-md-5" style={{ paddingLeft: "160px", paddingTop: "35px" }}><img src={register} className="img-fluid" /></div>
                                     </div>
@@ -132,9 +127,9 @@ class Home extends Component { //criando a classe
                                 <div className="carousel-item">
                                     <div className="row justify-content-center">
                                         <div className="col-sm-6 col-md-5 ">
-                                            <h2 className="num" style={{ paddingLeft: "140px" }}><b>2-</b></h2>
-                                            <h3 className="titulo" style={{ paddingLeft: "140px" }}><b>Busque por um serviço</b></h3>
-                                            <h4 className="" style={{ paddingLeft: "140px" }}>Navegue entre as diversas categorias de serviços no app ou procure por algo específico</h4>
+                                            <h2 className="num" style={{ paddingLeft: "90px" }}><b>2-</b></h2>
+                                            <h3 className="titulo" style={{ paddingLeft: "90px" }}><b>Busque por um serviço</b></h3>
+                                            <h4 className="" style={{ paddingLeft: "90px" }}>Navegue entre as diversas categorias de serviços no app ou procure por algo específico</h4>
                                         </div>
                                         <div className="col-sm-6 col-md-5" style={{ paddingLeft: "160px", paddingTop: "10px" }}>
                                             <lottie-player src={"https://assets4.lottiefiles.com/datafiles/qSKave3osZaw1QT/data.json"} speed={1.3} style={{ width: "180px", height: "180px", background: "transparent" }} loop autoplay ></lottie-player>
@@ -147,9 +142,9 @@ class Home extends Component { //criando a classe
 
 
                                         <div className="col-sm-6 col-md-5 ">
-                                            <h2 className="num" style={{ paddingLeft: "140px" }}><b>3-</b></h2>
-                                            <h3 className="titulo" style={{ paddingLeft: "140px" }}><b>Negocie com um prestador</b></h3>
-                                            <h4 className="" style={{ paddingLeft: "140px" }}>Conecte-se com prestadores pertos de você negocie o serviço direto pelo app</h4>
+                                            <h2 className="num" style={{ paddingLeft: "90px" }}><b>3-</b></h2>
+                                            <h3 className="titulo" style={{ paddingLeft: "90px" }}><b>Negocie com um prestador</b></h3>
+                                            <h4 className="" style={{ paddingLeft: "90px" }}>Conecte-se com prestadores pertos de você negocie o serviço direto pelo app</h4>
                                         </div>
                                         <div className="col-sm-6 col-md-5" style={{ paddingLeft: "160px", paddingTop: "35px" }}><img src={maos} className="img-fluid" /></div>
 
@@ -159,9 +154,9 @@ class Home extends Component { //criando a classe
                                     <div className="row justify-content-center">
 
                                         <div className="col-sm-6 col-md-5 ">
-                                            <h2 className="num" style={{ paddingLeft: "140px" }}><b>4-</b></h2>
-                                            <h3 className="titulo" style={{ paddingLeft: "140px" }}><b>Tudo pronto</b></h3>
-                                            <h4 className="" style={{ paddingLeft: "140px" }}>Depois de negociar você poderá marcar data e horário para o serviço acontecer e realizar o pagamento pelo app</h4>
+                                            <h2 className="num" style={{ paddingLeft: "90px" }}><b>4-</b></h2>
+                                            <h3 className="titulo" style={{ paddingLeft: "90px" }}><b>Tudo pronto</b></h3>
+                                            <h4 className="" style={{ paddingLeft: "90px" }}>Depois de negociar você poderá marcar data e horário para o serviço acontecer e realizar o pagamento pelo app</h4>
                                         </div>
                                         <div className="col-sm-6 col-md-5" style={{ paddingLeft: "160px", paddingTop: "35px" }}><img src={beleza} className="img-fluid" /></div>
 

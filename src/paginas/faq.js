@@ -25,19 +25,19 @@ class FAQ extends Component { //classe faq
                         <div className="row justify-content-around">
                             {/**coluna da esquerda */}
                             <div className="col-sm-12 col-md-3 cartaoo">
-                                <p className="num">Missão</p>
+                                <h2 className="num"><b>Missão</b></h2>
                                 <p className="titulo">Comunidades</p>
                                 <p >Fortalecer economias locais por meio da oferta e demanda de prestações de serviços nas comunidades.</p>
                             </div>
                             {/**coluna do meio */}
                             <div className="col-sm-12 col-md-3 cartaoo">
-                                <p className=" num">Visão</p>
+                                <h2 className=" num"><b>Visão</b></h2>
                                 <p className=" titulo">Prosperidade</p>
                                 <p >Ser referência nas prestações de serviços das cidades brasileiras, com o objetivo de inspirar comunidades a construir um futuro com economias locais mais integradas e prósperas.</p>
                             </div>
                             {/**coluna da direita */}
                             <div className="col-sm-12 col-md-3 cartaoo">
-                                <p className=" num">Valores</p>
+                                <h2 className=" num"><b>Valores</b></h2>
                                 <p className=" titulo">Empoderar</p>
                                 <p >Empoderar comunidades; Facilitar as relações profissionais nas cidades brasileiras; Atender demandas locais; Divulgar prestadores de serviços regionais; Desburocratizar prestações de serviços.</p>
                             </div>
