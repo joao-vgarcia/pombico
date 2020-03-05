@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import logo from '../src/imagens/logoPombo.PNG';
 import './Footer.css';
 
